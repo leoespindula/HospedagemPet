@@ -17,13 +17,35 @@
             <div class="col-8">
                 <H1>FORMULÁRIO PARA HOSPEDAGEM PET</H1>
             </div>
-
         </div>
     </div>
     <div class="conteudo">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 mt-5">
+                <div class="col-12 col-lg-6 my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Informações do Tutor</h2>
+                            <div class="form-group">
+                                <label for="nomeTutor">Nome do Tutor:</label>
+                                <input class="form-control"type="text" id="nomeTutor" name="nomeTutor">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf">CPF:</label>
+                                <input class="form-control" type="text" id="cpf" name="cpf" >
+                            </div>
+                            <div class="form-group">
+                                <label for="tell">Telefone</label>
+                                <input class="form-control"pattern="[(]{1}[0-9]{2}[)]{1} [0-9]{5}-[0-9]{4}" type="text" id="tell" name="tell">
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço</label>
+                                <input class="form-control"type="text" id="endereco" name="endereco">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 my-3">
                     <div class="card">
                         <div class="card-body">
                             <h2>Informações do Pet</h2>
@@ -57,47 +79,28 @@
                                 <input type="radio" name="sexo" id="femea">
                                 <label for="femea">Fêmea</label>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 my-3">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h2>Localização</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.16221508796656!2d-40.66424156300849!3d-20.358455967355482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b5128e25f5b9%3A0xd689b3ec0a13766e!2sAv.%20Pres.%20Vargas%2C%2032%20-%20Domingos%20Martins%2C%20ES%2C%2029260-000!5e0!3m2!1spt-BR!2sbr!4v1668535848151!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Informações Adicionais</h2>
                             <div class="form-group">
                                 <label for="tellVet">Contato Veterinário:</label>
                                 <input class="form-control"type="text" id="tellVet" name="tellVet">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2>Informações do Tutor</h2>
-                            <div class="form-group">
-                                <label for="nomeTutor">Nome do Tutor:</label>
-                                <input class="form-control"type="text" id="nomeTutor" name="nomeTutor">
-                            </div>
-                            <div class="form-group">
-                                <label for="cpf">CPF:</label>
-                                <input class="form-control" type="text" id="cpf" name="cpf" >
-                            </div>
-                            <div class="form-group">
-                                <label for="tell">Telefone</label>
-                                <input class="form-control"pattern="[(]{1}[0-9]{2}[)]{1} [0-9]{5}-[0-9]{4}" type="text" id="tell" name="tell">
-                            </div>
-                            <div class="form-group">
-                                <label for="endereco">Endereço</label>
-                                <input class="form-control"type="text" id="endereco" name="endereco">
-                            </div>
-                            <br>
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <button type="submit" class="btn btn-primary">ENVIAR</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-end">
-                <div class="col-12 col-lg-6 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2>Localização</h2>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.16221508796656!2d-40.66424156300849!3d-20.358455967355482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b5128e25f5b9%3A0xd689b3ec0a13766e!2sAv.%20Pres.%20Vargas%2C%2032%20-%20Domingos%20Martins%2C%20ES%2C%2029260-000!5e0!3m2!1spt-BR!2sbr!4v1668535848151!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
