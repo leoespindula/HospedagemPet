@@ -27,6 +27,8 @@
             <form action="https://formsubmit.co/leonardoespindula@hotmail.com" method="post" id="formulario">
                 <input type="hidden" name="_next" value="https://leoespindula.github.io/HospedagemPet/sucesso.html">
                 <input type="hidden" name="_cc" value="mcom2601@gmail.com">
+                <input type="hidden" name="_autoresponse" value="A hospedagem Pet da Região Serrana agradece a sua preferência e colaboração! As informações são importantes para garantir ao seu pet o atendimento dedicado e especializado que ele merece.">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="row">
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
@@ -42,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="tell2">Telefone 2</label>
-                                    <input class="form-control" pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}"type="tel" id="tell2" name="Telefone2" placeholder="(99)99999-9999">
+                                    <input class="form-control" pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}"type="tel" id="tell2" name="Telefone_2" placeholder="(99)99999-9999">
                                 </div>
                                 <div class="form-group">
                                     <label for="endereco">Endereço</label>
@@ -50,7 +52,7 @@
                                 </div> 
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com">
+                                    <input class="form-control" type="email" name="Email" id="email" placeholder="email@email.com">
                                 </div>  
                             </div>
                         </div>
@@ -61,7 +63,7 @@
                                 <h2>Dados do Pet</h2>
                                 <div class="form-group">
                                     <label for="nomePet">Nome do Pet:</label>
-                                    <input class="form-control" type="text" id="nomePet" name="NomePet" required>
+                                    <input class="form-control" type="text" id="nomePet" name="Nome_Pet" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="raca">Raça:</label>
@@ -95,11 +97,11 @@
                                 <h2>Informações Adicionais</h2>
                                 <div class="form-group">
                                     <label for="tellVet">Contato Veterinário:</label>
-                                    <input class="form-control"type="tel" id="TelefoneVeterinario" name="TelefoneVeterinario" required pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder="(99)99999-9999">
+                                    <input class="form-control"type="tel" id="TelefoneVeterinario" name="Telefone_Veterinario" required pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder="(99)99999-9999">
                                 </div>
                                 <div class="form-group">
                                     <label for="iten">Itens Pessoais:</label>
-                                    <input class="form-control"type="text" id="iten" name="ItensPessoais" required placeholder="Ex:Coleira, guia, cama, cobertor, potes, brinquedos, entre outros.">
+                                    <input class="form-control"type="text" id="iten" name="Itens_Pessoais" required placeholder="Ex:Coleira, guia, cama, cobertor, potes, brinquedos, entre outros.">
                                 </div>
                                 <div class="form-group">
                                     <label for="medicamentos">Faz uso de medicamentos:</label><br>
