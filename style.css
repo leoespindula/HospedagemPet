@@ -17,6 +17,9 @@ h1{
     background-color:rgba(54, 54, 54, 0.627);
     border-radius: 50px;
 }
+h2{
+    text-align: center;
+}
 textarea.form-control{
     height: 60px;
     resize: none;
