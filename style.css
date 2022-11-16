@@ -39,3 +39,30 @@ button.btn.btn-primary{
     transition: 0.5s;
     font-family: 'Asul', sans-serif;
 }
+.whats{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+      }   
+.insta{
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+}
+.whats:active{
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+}
+.insta:active{
+    position: fixed;
+    bottom: 18px;
+    right: 78px;
+}
+img{
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+input{
+    margin-bottom: 15px;
+}
