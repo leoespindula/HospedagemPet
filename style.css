@@ -21,8 +21,23 @@ textarea.form-control{
     height: 60px;
     resize: none;
 }
-.contato{
+.whats{
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+.insta{
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+}
+.whats:active{
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+}
+.insta:active{
+    position: fixed;
+    bottom: 18px;
+    right: 78px;
 }
