@@ -39,10 +39,7 @@ button.btn.btn-primary{
     transition: 0.5s;
     font-family: 'Asul', sans-serif;
 }
-img{
-    border-radius: 100px;
-    margin-bottom: 10px;
-}
+
 input{
     margin-bottom: 15px;
 }
