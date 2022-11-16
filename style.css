@@ -16,11 +16,11 @@ h1{
     color: white;
     background-color:rgba(54, 54, 54, 0.627);
     border-radius: 50px;
-    font-family: 'Aclonica', sans-serif;
+    font-family: 'Asul', sans-serif;
 }
 h2{
     text-align: center;
-    font-family: 'Aclonica', sans-serif;
+    font-family: 'Asul', sans-serif;
 }
 textarea.form-control{
     height: 60px;
@@ -36,5 +36,5 @@ button.btn.btn-primary:active{
 button.btn.btn-primary{
     box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
     transition: 0.5s;
-    font-family: 'Aclonica', sans-serif;
+    font-family: 'Asul', sans-serif;
 }
