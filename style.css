@@ -1,7 +1,7 @@
 body{
-    /* background-image:url(2.png) ; */
     background-size: 600px 550px;
     padding-top: 30px;
+    padding-bottom: 80px;
 }
 .card{
     box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
@@ -20,4 +20,9 @@ h1{
 textarea.form-control{
     height: 60px;
     resize: none;
+}
+.contato{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
