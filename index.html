@@ -46,9 +46,23 @@
         img.logo{
             border-radius: 100px;
             margin-bottom: 10px;
+            transition: 0.5s;
+        }
+        img.logo:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
         }
         img.sobre{
             width: 100%;
+            transition: 0.5s;
+        }
+        img.sobre:hover{
+            transform: scale(1.05);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .sobreImg{
+            overflow: hidden;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -64,8 +78,7 @@
             </div>
             <div class="col-12 col-lg-8">
                 <H1>FORMULÁRIO PARA HOSPEDAGEM PET</H1>
-            </div>
-            
+            </div> 
         </div>
     </div>
     <div class="conteudo">
@@ -100,7 +113,7 @@
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input class="form-control" type="email" name="Email" id="email" placeholder="email@email.com">
-                                </div>  
+                                </div>          
                             </div>
                         </div>
                     </div>
@@ -203,13 +216,13 @@
                                     <center>
                                     <button type="submit" class="btn btn-primary">ENVIAR</button>
                                     </center>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body sobreImg">
                                 <h2>Sobre</h2>
                                 <img class="sobre"src="sobre.jpg" alt="sobre">
                             </div>
