@@ -9,7 +9,7 @@ body{
 }
 iframe{
     width: 100%;
-    height: 550px;
+    height: 350px;
 }
 h1{
     text-align: center;
@@ -42,4 +42,10 @@ button.btn.btn-primary{
 
 input{
     margin-bottom: 15px;
+}
+li{
+    margin-bottom: 15px;
+}
+legend{
+    margin-bottom: 18px;
 }
