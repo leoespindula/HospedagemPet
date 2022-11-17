@@ -52,6 +52,7 @@ li:hover{
     transform: scale(1.1);
     margin-left: 25px;
     transition: 0.3s;
+    cursor: pointer;
 }
 legend{
     margin-bottom: 18px;
