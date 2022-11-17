@@ -10,6 +10,14 @@ body{
 iframe{
     width: 100%;
     height: 350px;
+    transition: 0.5s;
+}
+iframe:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.mapa{
+    overflow: hidden;
 }
 h1{
     text-align: center;
