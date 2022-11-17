@@ -46,6 +46,12 @@ input{
 }
 li{
     margin-bottom: 15px;
+    transition: 0.3s;
+}
+li:hover{
+    transform: scale(1.1);
+    margin-left: 30px;
+    transition: 0.3s;
 }
 legend{
     margin-bottom: 18px;
