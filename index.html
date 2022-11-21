@@ -96,11 +96,11 @@
                                 <h2>Dados do Tutor</h2>
                                 <div class="form-group">
                                 <label for="nomeTutor">Nome do Tutor:</label>
-                                    <input class="form-control"type="text" id="nomeTutor" name="nomeTutor" required placeholder="Seu nome aqui">
+                                    <input class="form-control"type="text" id="nomeTutor" name="nomeTutor"  placeholder="Seu nome aqui">
                                 </div>
                                 <div class="form-group">
                                     <label for="tele">Telefone</label>
-                                    <input class="form-control"pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" type="tel" id="tell" name="Telefone" required placeholder="(99)99999-9999">
+                                    <input class="form-control"pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" type="tel" id="tell" name="Telefone"  placeholder="(99)99999-9999">
                                 </div>
                                 <div class="form-group">
                                     <label for="tell2">Outro Telefone(opcional)</label>
@@ -124,7 +124,7 @@
                                 <h2>Dados do Pet</h2>
                                 <div class="form-group">
                                     <label for="nomePet">Nome do Pet:</label>
-                                    <input class="form-control" type="text" id="nomePet" name="Nome_Pet" required>
+                                    <input class="form-control" type="text" id="nomePet" name="Nome_Pet" >
                                 </div>
                                 <div class="form-group">
                                     <label for="especie">Espécie:</label >
@@ -132,22 +132,25 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="raca">Raça:</label>
-                                    <input class="form-control" type="text" id="raca" name="Raca" required>
+                                    <input class="form-control" type="text" id="raca" name="Raca" >
                                 </div> 
                                 <div class="form-group">
-                                    <label for="sexo">Sexo:</label><br>
-                                    <input type="radio" name="sexo" id="macho" value="Macho" required>
+                                    <label for="sexo" >Sexo:</label><br>
+                                    <label class="radio" id="sexo">
+                                    <input type="radio" name="sexo" id="macho" value="Macho">
                                     <label for="macho">Macho</label>
                                     <input type="radio" name="sexo" id="femea" value="Femea">
-                                    <label for="femea">Fêmea</label>
+                                    <label for="femea">Fêmea</label></label>
                                 </div> 
                                 <div class="form-group">
                                     <label for="idade">Idade:</label>
-                                    <input class="form-control"type="number" id="idade" name="Idade" required>
-                                    <input type="radio" name="idade" id="meses" value="Meses" required>
+                                    <input class="form-control"type="number" id="idade" name="Idade" >
+                                    <label id="tipoIdade" class="radio">
+                                    <input type="radio" name="idade" id="meses" value="Meses" >
                                     <label for="meses">Meses</label>
                                     <input type="radio" name="idade" id="anos" value="Anos">
-                                    <label for="anos">Anos</label>
+                                    <label for="anos">Anos</label></label>
+                                    
                                 </div> 
                             </div>
                         </div>
@@ -159,54 +162,60 @@
                                 <h2>Informações Adicionais</h2>
                                 <div class="form-group">
                                     <label for="tellVet">Contato Veterinário:</label>
-                                    <input class="form-control"type="tel" id="TelefoneVeterinario" name="Telefone_Veterinario" required pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder="(99)99999-9999">
+                                    <input class="form-control"type="tel" id="TelefoneVeterinario" name="Telefone_Veterinario"  pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder="(99)99999-9999">
                                 </div>
                                 <div class="form-group">
-                                    <label for="iten">Itens Pessoais:</label>
-                                    <input class="form-control"type="text" id="iten" name="Itens_Pessoais" required placeholder="Ex:Coleira, guia, cama, cobertor, potes, brinquedos, entre outros.">
+                                    <label for="item">Itens Pessoais:</label>
+                                    <input class="form-control"type="text" id="item" name="Itens_Pessoais"  placeholder="Ex:Coleira, guia, cama, cobertor, potes, brinquedos, entre outros.">
                                 </div>
                                 <div class="form-group">
                                     <label for="medicamentos">Faz uso de medicamentos:</label><br>
-                                    <input type="radio" name="medicamentos"id="fazUso" value="sim" required>
+                                    <label class="radio" id="medicamentoSN">
+                                    <input type="radio" name="medicamentos"id="fazUso" value="sim" >
                                     <label for="fazUso">Sim</label>
                                     <input type="radio" name="medicamentos" id="naoUsa" value="nao">
-                                    <label for="naoUsa">Não</label>
+                                    <label for="naoUsa">Não</label></label>
                                     <input class="form-control" type="text" id="medicamentos" name="Medicamentos" placeholder="Se sim, quais?">
                                 </div>
                                 <div class="form-group">
                                     <label for="castrado">Castrado:</label><br>
-                                    <input type="radio" name="castrado"id="sCastrado" value="sim" required>
+                                    <label class="radio" id="castrado">
+                                    <input type="radio" name="castrado"id="sCastrado" value="sim" >
                                     <label for="sCastrado">Sim</label>
                                     <input type="radio" name="castrado" id="nCastrado" value="nao">
-                                    <label for="nCastrado">Não</label>
+                                    <label for="nCastrado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="vacinado">Vacinado:</label><br>
-                                    <input type="radio" name="vacinado" id="sVacinado" value="Sim"required>
+                                    <label id="vacinado" class="radio">
+                                    <input type="radio" name="vacinado" id="sVacinado" value="Sim">
                                     <label for="sVacinado">Sim</label>
                                     <input type="radio" name="vacinado" id="nVacinado" value="Nao">
-                                    <label for="nVacinado">Não</label>
+                                    <label for="nVacinado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="vermifugado">Vermifugado:</label><br>
-                                    <input type="radio" name="vermifugado" id="sVermifugado" value="Sim" required>
+                                    <label id="vermifugado" class="radio">
+                                    <input type="radio" name="vermifugado" id="sVermifugado" value="Sim" >
                                     <label for="sVermifugado">Sim</label>
                                     <input type="radio" name="vermifugado" id="nVermifugado" value="Nao">
-                                    <label for="nVermifugado">Não</label>
+                                    <label for="nVermifugado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="prevencao">A prevenção contra pulgas e carrapatos está em dia:</label><br>
-                                    <input type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" required>
+                                    <label id="prevencao" class="radio">
+                                    <input type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" >
                                     <label for="sPrevinido">Sim</label>
                                     <input type="radio" name="Prevencao_anti_Pulgas" id="nPrevinido" value="Nao">
-                                    <label for="nPrevinido">Não</label>
+                                    <label for="nPrevinido">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="sociavel">Sociável com outros animais:</label><br>
-                                    <input type="radio" name="sociavel" id="sSociavel" value="Sim" required>
+                                    <label id="sociavel" class="radio">
+                                    <input type="radio" name="sociavel" id="sSociavel" value="Sim" >
                                     <label for="sSociavel">Sim</label>
                                     <input type="radio" name="sociavel" id="nSociavel" value="Nao">
-                                    <label for="nSociavel">Não</label>
+                                    <label for="nSociavel">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="rotina">Descreva a rotina do seu pet:</label>
@@ -217,6 +226,9 @@
                                     <button type="submit" class="btn btn-primary">ENVIAR</button>
                                     </center>
                                 </div> 
+                                <div class="alert alert-danger d-none">
+                                    Preencha o campo <span id="campo-erro"></span>!
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -267,5 +279,9 @@
             <img src="instagram.png" alt="instagram" width="50" onclick="instagram.com/mariaclara_mcom" title="Acesse meu Instagram">
         </a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="funcao.js"></script>
 </body>
 </html>
