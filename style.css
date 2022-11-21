@@ -66,3 +66,7 @@ li:hover{
 legend{
     margin-bottom: 18px;
 }
+
+form, .alert{
+    margin-bottom: 0;
+}
