@@ -26,6 +26,9 @@ h1{
     border-radius: 50px;
     font-family: 'Asul', sans-serif;
     font-size: max(30px, 3.2vw);
+    width: max(350px, 70vw);
+    margin-left: auto;
+    margin-right: auto;
 }
 h2{
     text-align: center;
@@ -77,6 +80,7 @@ form, .alert{
     border-radius: 50px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-left: 10px;
     font-size: max(8px, 1vw);
     
 }
