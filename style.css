@@ -36,14 +36,14 @@ textarea.form-control{
     height: 60px;
     resize: none;
 }
-button.btn.btn-primary:active{
+button.btn:active{
     position: relative;
     left: 1px;
     top: 1px;
     box-shadow: 2px 5px 7px 2px rgba(87, 87, 87, 0.527);
     transition: 0.5s;
 }
-button.btn.btn-primary{
+button.btn {
     box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
     transition: 0.5s;
     font-family: 'Asul', sans-serif;

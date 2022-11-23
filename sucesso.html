@@ -22,22 +22,18 @@
             border-radius: 50px;
             font-family: 'Asul', sans-serif;
         }
-        a{
-            color: white;
-            font-size: 30px;
-            text-decoration: none; 
-            font-family: 'Asul', sans-serif;
-            transition: 0.3s;     
-        }        
-        a:hover{
-            font-size: 40px;
-            color: aliceblue;
-            transition: 0.3s;
-            
+        .btn.btn-primary:active{
+            position: relative;
+            left: 1px;
+            top: 1px;
+            box-shadow: 2px 5px 7px 2px rgba(87, 87, 87, 0.527);
+            transition: 0.5s;
         }
-        p{
-            background-color: rgba(54, 54, 54, 0.627);
-            border-radius: 100px;
+        .btn.btn-primary{
+            box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
+            transition: 0.5s;
+            font-family: 'Asul', sans-serif;
+            margin-top: 18px;
         }
         .whats{
             position: fixed;
@@ -100,7 +96,7 @@
             <div class="col-2 mt-1">
                 <center>
                 <p>
-                    <a href="index.html">VOLTAR</a>
+                    <a class="btn btn-primary btn-lg" href="index.html">VOLTAR</a>
                 </p>
                 </center>
             </div>

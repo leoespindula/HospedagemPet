@@ -137,18 +137,18 @@
                                 <div class="form-group">
                                     <label for="sexo" >Sexo:</label><br>
                                     <label class="radio" id="sexo">
-                                    <input type="radio" name="sexo" id="macho" value="Macho">
+                                    <input class="form-check-input" type="radio" name="sexo" id="macho" value="Macho">
                                     <label for="macho">Macho</label>
-                                    <input type="radio" name="sexo" id="femea" value="Femea">
+                                    <input class="form-check-input" type="radio" name="sexo" id="femea" value="Femea">
                                     <label for="femea">Fêmea</label></label>
                                 </div> 
                                 <div class="form-group">
                                     <label for="idade">Idade:</label>
                                     <input class="form-control"type="number" id="idade" name="Idade" >
                                     <label id="tipoIdade" class="radio">
-                                    <input type="radio" name="idade" id="meses" value="Meses" >
+                                    <input class="form-check-input" type="radio" name="idade" id="meses" value="Meses" >
                                     <label for="meses">Meses</label>
-                                    <input type="radio" name="idade" id="anos" value="Anos">
+                                    <input class="form-check-input" type="radio" name="idade" id="anos" value="Anos">
                                     <label for="anos">Anos</label></label>
                                     
                                 </div> 
@@ -171,50 +171,50 @@
                                 <div class="form-group">
                                     <label for="medicamentos">Faz uso de medicamentos:</label><br>
                                     <label class="radio" id="medicamentoSN">
-                                    <input type="radio" name="medicamentos"id="fazUso" value="sim" >
+                                    <input class="form-check-input" type="radio" name="medicamentos"id="fazUso" value="sim" >
                                     <label for="fazUso">Sim</label>
-                                    <input type="radio" name="medicamentos" id="naoUsa" value="nao">
+                                    <input class="form-check-input" type="radio" name="medicamentos" id="naoUsa" value="nao">
                                     <label for="naoUsa">Não</label></label>
                                     <input class="form-control" type="text" id="medicamentos" name="Medicamentos" placeholder="Se sim, quais?">
                                 </div>
                                 <div class="form-group">
                                     <label for="castrado">Castrado:</label><br>
                                     <label class="radio" id="castrado">
-                                    <input type="radio" name="castrado"id="sCastrado" value="sim" >
+                                    <input class="form-check-input" type="radio" name="castrado"id="sCastrado" value="sim" >
                                     <label for="sCastrado">Sim</label>
-                                    <input type="radio" name="castrado" id="nCastrado" value="nao">
+                                    <input class="form-check-input" type="radio" name="castrado" id="nCastrado" value="nao">
                                     <label for="nCastrado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="vacinado">Vacinado:</label><br>
                                     <label id="vacinado" class="radio">
-                                    <input type="radio" name="vacinado" id="sVacinado" value="Sim">
+                                    <input class="form-check-input" type="radio" name="vacinado" id="sVacinado" value="Sim">
                                     <label for="sVacinado">Sim</label>
-                                    <input type="radio" name="vacinado" id="nVacinado" value="Nao">
+                                    <input class="form-check-input" type="radio" name="vacinado" id="nVacinado" value="Nao">
                                     <label for="nVacinado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="vermifugado">Vermifugado:</label><br>
                                     <label id="vermifugado" class="radio">
-                                    <input type="radio" name="vermifugado" id="sVermifugado" value="Sim" >
+                                    <input class="form-check-input" type="radio" name="vermifugado" id="sVermifugado" value="Sim" >
                                     <label for="sVermifugado">Sim</label>
-                                    <input type="radio" name="vermifugado" id="nVermifugado" value="Nao">
+                                    <input class="form-check-input" type="radio" name="vermifugado" id="nVermifugado" value="Nao">
                                     <label for="nVermifugado">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="prevencao">A prevenção contra pulgas e carrapatos está em dia:</label><br>
                                     <label id="prevencao" class="radio">
-                                    <input type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" >
+                                    <input class="form-check-input" type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" >
                                     <label for="sPrevinido">Sim</label>
-                                    <input type="radio" name="Prevencao_anti_Pulgas" id="nPrevinido" value="Nao">
+                                    <input class="form-check-input" type="radio" name="Prevencao_anti_Pulgas" id="nPrevinido" value="Nao">
                                     <label for="nPrevinido">Não</label></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="sociavel">Sociável com outros animais:</label><br>
                                     <label id="sociavel" class="radio">
-                                    <input type="radio" name="sociavel" id="sSociavel" value="Sim" >
+                                    <input class="form-check-input" type="radio" name="sociavel" id="sSociavel" value="Sim" >
                                     <label for="sSociavel">Sim</label>
-                                    <input type="radio" name="sociavel" id="nSociavel" value="Nao">
+                                    <input class="form-check-input" type="radio" name="sociavel" id="nSociavel" value="Nao">
                                     <label for="nSociavel">Não</label></label>
                                 </div>
                                 <div class="form-group">
@@ -223,7 +223,8 @@
                                 </div>
                                 <div class="form-group my-3">
                                     <center>
-                                    <button type="submit" class="btn btn-primary">ENVIAR</button>
+                                    <button type="submit" class="btn btn-primary mx-1">ENVIAR</button>
+                                    <button type="reset" class="btn btn-secondary mx-1">LIMPAR</button>
                                     </center>
                                 </div> 
                                 <div class="alert alert-danger d-none">
