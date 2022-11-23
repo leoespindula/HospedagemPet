@@ -81,6 +81,7 @@ form, .alert{
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 10px;
+    margin-top: -20px;
     font-size: max(8px, 1vw);
     
 }
