@@ -22,6 +22,10 @@
             background-color:rgba(54, 54, 54, 0.627);
             border-radius: 50px;
             font-family: 'Asul', sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            width: max(360px, 65vw);
+            font-size: max(28px, 3.2vw);
         }
         .btn.btn-primary:active{
             position: relative;
@@ -70,39 +74,42 @@
             border-radius: 100px;
             margin-bottom: 10px;
             transition: 0.5s;
+            width: max(170px, 15vw);
+            
         }
         img.logo:hover{
             transform: scale(1.1);
             transition: 0.5s;
         }
+        .botao{
+            margin-left: auto;
+            margin-right: auto;
+            width: max(360px, 65vw);
+        }
+        .logomarca{
+            margin-left: auto;
+            margin-right: auto;
+            width: max(350px, 15vw);
+        }
+        
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="logo">
-                <center>
-                <img class="logo"src="logo.jpeg" alt="logo" width="200">
-            </center>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="titulo col-12 mt-5 col-lg-6 pt-3 px-3">
-                <h1>Informações enviadas com sucesso, obrigada!</h1><br>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-6 col-12-md mt-1">
-                <center>
-                <p>
-                    <a class="btn btn-primary btn-lg" href="index.html">VOLTAR</a>
-                </p>
-                </center>
-            </div>
-        </div>
-    </div>
+    <center>
+        <p class="logomarca">
+            <img class="logo"src="logo.jpeg" alt="logo" width="200">
+        </p>
+    </center>
+
+
+    <h1 class="titulo">Informações enviadas com sucesso, obrigada!</h1><br>
+
+    <center>
+        <p class="botao">
+            <a class="btn btn-primary btn-lg" href="index.html">VOLTAR</a>
+        </p>
+    </center>
+            
     <div class="whats">
         <a href="https://wa.me/5527999832612?text=Olá, Tenho interesse no serviço de hospedagem para o meu pet." target="_blank">
             <img src="whatsapp.png" alt="whatsapp" width="50" title="Acesse meu Whatsapp">
