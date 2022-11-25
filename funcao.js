@@ -33,7 +33,9 @@ $('#formulario').submit(function(){
     var prevencao = $('#prevencao')
     var sSociavel = document.getElementById("sSociavel");
     var nSociavel = document.getElementById("nSociavel");
-    var sociavel = $('#sociavel')
+    var sociavel = $('#sociavel');
+    var dataIni = $('#dataIni');
+    var dataFim = $('#dataFim');
 
     
 
@@ -56,6 +58,22 @@ $('#formulario').submit(function(){
         campo.html('Telefone');
         telefone.focus();
         telefone.addClass('is-invalid');
+        return false;
+    }
+
+    else if(dataIni.val() == ''){
+        erro.removeClass('d-none');
+        campo.html('Data de Entrada');
+        dataIni.focus();
+        dataIni.addClass('is-invalid');
+        return false;
+    }
+
+    else if(dataFim.val() == ''){
+        erro.removeClass('d-none');
+        campo.html('Data de Saída');
+        dataFim.focus();
+        dataFim.addClass('is-invalid');
         return false;
     }
 

@@ -34,6 +34,7 @@ h2{
     text-align: center;
     font-family: 'Asul', sans-serif;
     font-size: max(27px, 3vw);
+    margin-bottom: 25px;
 }
 textarea.form-control{
     height: 60px;
@@ -50,7 +51,7 @@ button.btn {
     box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
     transition: 0.5s;
     font-family: 'Asul', sans-serif;
-    margin-top: 18px;
+    margin-bottom: -15px;
 }
 
 li{
@@ -81,4 +82,7 @@ form, .alert{
     margin-top: -20px;
     font-size: max(8px, 1vw);
     
+}
+.alert{
+    margin-top: 25px;
 }
