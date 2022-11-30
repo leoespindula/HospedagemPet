@@ -148,7 +148,7 @@
                                 </div> 
                                 <div class="form-group">
                                     <label class="form-label mx-1" for="sexo" >Sexo:</label><br>
-                                    <label class="radio" id="sexo">
+                                    <label class="radio btn-group" id="sexo">
                                     <input class="btn-check" type="radio" name="sexo" id="macho" value="Macho">
                                     <label class="form-label btn btn-outline-secondary" for="macho">Macho</label>
                                     <input class="btn-check" type="radio" name="sexo" id="femea" value="Femea">
@@ -158,18 +158,20 @@
                                     <input class="form-control"type="number" id="idade" name="Idade" placeholder=" ">
                                     <label class="form-label" for="idade">Idade:</label> 
                                 </div> 
-                                <div><label class="radio" id="tipoIdade" >
+                                <div>
+                                    <label class="radio btn-group" id="tipoIdade" >
                                     <input class="btn-check" type="radio" name="idade" id="meses" value="Meses" >
                                     <label class="form-label  btn btn-outline-secondary" for="meses">Meses</label>
                                     <input class="btn-check" type="radio" name="idade" id="anos" value="Anos">
-                                    <label class="form-label  btn btn-outline-secondary" for="anos">Anos</label></label></div>
+                                    <label class="form-label  btn btn-outline-secondary" for="anos">Anos</label></label>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- INFORMAÇÕES ADICIONAIS -->
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <h2>Informações Adicionais</h2>
                                 <div class="form-floating my-2">
                                     <input class="form-control"type="tel" id="TelefoneVeterinario" name="Telefone_Veterinario"  pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder=" ">
@@ -181,7 +183,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="medicamentos">Faz uso de medicamentos:</label><br>
-                                    <label class="radio " id="medicamentoSN">
+                                    <label class="radio btn-group" id="medicamentoSN">
                                     <input class="btn-check" type="radio" name="medicamentos"id="fazUso" value="sim" >
                                     <label class="form-label btn btn-outline-primary" for="fazUso">Sim</label>
                                     <input class="btn-check" type="radio" name="medicamentos" id="naoUsa" value="nao">
@@ -193,7 +195,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="castrado">Castrado:</label><br>
-                                    <label class="radio" id="castrado">
+                                    <label class="radio btn-group" id="castrado">
                                     <input class="btn-check" type="radio" name="castrado"id="sCastrado" value="sim" >
                                     <label class="form-label btn btn-outline-primary" for="sCastrado">Sim</label>
                                     <input class="btn-check"  type="radio" name="castrado" id="nCastrado" value="nao">
@@ -201,15 +203,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="vacinado">Vacinado:</label><br>
-                                    <label class="radio" id="vacinado">
+                                    <label class="radio btn-group" id="vacinado">
                                     <input class="btn-check" type="radio" name="vacinado" id="sVacinado" value="Sim">
                                     <label class="form-label btn btn-outline-primary" for="sVacinado">Sim</label>
                                     <input class="btn-check" type="radio" name="vacinado" id="nVacinado" value="Nao">
                                     <label class="form-label btn btn-outline-danger" for="nVacinado">Não</label></label>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-6">
                                     <label class="form-label" for="vermifugado">Vermifugado:</label><br>
-                                    <label class="radio" id="vermifugado" >
+                                    <label class="radio btn-group" id="vermifugado" >
                                     <input class="btn-check" type="radio" name="vermifugado" id="sVermifugado" value="Sim" >
                                     <label class="form-label btn btn-outline-primary" for="sVermifugado">Sim</label>
                                     <input class="btn-check" type="radio" name="vermifugado" id="nVermifugado" value="Nao">
@@ -217,7 +219,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="prevencao">A prevenção contra pulgas e carrapatos está em dia:</label><br>
-                                    <label class="radio" id="prevencao">
+                                    <label class="radio btn-group" id="prevencao">
                                     <input class="btn-check" type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" >
                                     <label class="form-label btn btn-outline-primary" for="sPrevinido">Sim</label>
                                     <input class="btn-check" type="radio" name="Prevencao_anti_Pulgas" id="nPrevinido" value="Nao">
@@ -225,7 +227,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="sociavel">Sociável com outros animais:</label><br>
-                                    <label class="radio" id="sociavel">
+                                    <label class="radio btn-group" id="sociavel">
                                     <input class="btn-check" type="radio" name="sociavel" id="sSociavel" value="Sim" >
                                     <label class="form-label btn btn-outline-primary" for="sSociavel">Sim</label>
                                     <input class="btn-check" type="radio" name="sociavel" id="nSociavel" value="Nao">
