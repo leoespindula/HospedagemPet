@@ -83,6 +83,6 @@ form, .alert{
     font-size: max(8px, 1vw);
     
 }
-.alert{
+.mensagem-alerta{
     margin-top: 25px;
 }
