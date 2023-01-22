@@ -97,11 +97,11 @@ ul.pagamento{
 }
 a.nav-link{
     color: white;
-    font-size: min(23px, 3.5vw);
+    font-size: min(25px, 3.5vw);
 }
 a.nav-link.active{
     color: rgb(24, 104, 253) !important;
-    font-size: min(24px, 3.7vw);
+    font-size: min(26px, 3.7vw);
 }
 a.nav-link:hover{
     color: white;
