@@ -86,3 +86,10 @@ form, .alert{
 .mensagem-alerta{
     margin-top: 25px;
 }
+p.botao.btn-group  {
+    margin-left: auto;
+    margin-right: auto;
+    width: max(320px, 65vw);
+    height: min(120x, 5vw);
+    font-size:60px;
+}

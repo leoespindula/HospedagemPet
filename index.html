@@ -88,172 +88,22 @@
         <center>
             <img class="logo"src="logo.jpeg" alt="logo">
         </center>        
-        <H1>FORMULÁRIO PARA HOSPEDAGEM PET</H1>
+        <H1>HOSPEDAGEM PET REGIÃO SERRANA</H1>
+        
+        <div class="form-group my-3">
+            <center>
+                <p class="botao btn-group">
+                    <a class="btn btn-dark btn-lg mb-1 active" href="index.html"> Pagina Inicial</a>
+                    <a class="btn btn-dark btn-lg mb-1" href="hospedagem.html"> Serviço de Hospedagem</a>
+                    <a class="btn btn-dark btn-lg mb-1" href="creche.html">Serviço de Creche</a>
+                </p>
+            </center>
+        </div> 
+        </p>
     </div>
     <div class="conteudo">
         <div class="container">
-            <form action="https://formsubmit.co/leonardoespindula@hotmail.com" method="post" id="formulario">
-                <input type="hidden" name="_next" value="https://leoespindula.github.io/HospedagemPet/sucesso.html">
-                <input type="hidden" name="_cc" value="mcom2601@gmail.com">
-                <input type="hidden" name="_autoresponse" value="A hospedagem Pet da Região Serrana agradece a sua preferência e colaboração! As informações são importantes para garantir ao seu pet o atendimento dedicado e especializado que ele merece.">
-                <input type="hidden" name="_captcha" value="false">
                 <div class="row">
-                    <!-- DADOS DO TUTOR -->
-                    <div class="col-12 col-lg-6 my-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h2>Dados do Tutor</h2>
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="text" id="nomeTutor" name="nomeTutor"  placeholder=" ">
-                                    <label class="form-label " for="nomeTutor">Nome do Tutor:</label>
-                                </div>
-                                <div class="form-floating my-2">
-                                    <input class="form-control"pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" type="tel" id="tell" name="Telefone"  placeholder=" ">
-                                    <label class="form-label" for="tele">Telefone:</label>
-                                </div>
-
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="text" id="endereco" name="Endereco" placeholder=" ">
-                                    <label class="form-label" for="endereco">Endereço:</label>
-                                </div> 
-                                <div class="form-floating my-2">
-                                    <input class="form-control" type="email" name="Email" id="email" placeholder=" ">
-                                    <label class="form-label" for="email">Email:</label>
-                                </div>     
-                                <!-- <div class="form-floating my-2"> 
-                                    <p class="alert alert-danger">No momento estamos sem datas disponíveis</p>
-                                </div>  -->
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="datetime-local" id="dataIni" name="Data_entrada" max="2023-12-31T23:59" placeholder=" " min="2023-01-07T00:00" >
-                                    <label for="dataIni">Data e hora de entrada Desejada:</label>
-                                </div>    
-                                <div class="form-floating my-2">
-                                    <input class="form-control" type="datetime-local" id="dataFim" name="Data_saida" max="2023-12-31T23:59"  min="2023-01-07T00:00" placeholder=" ">
-                                    <label for="dataFim">Data e hora de saída Desejada:</label>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- DADOS DO PET -->
-                    <div class="col-12 col-lg-6 my-3">
-                        <div class="card">
-                            <div class="card-body">  
-                                <h2>Dados do Pet</h2>
-                                <div class="form-floating my-2">
-                                    <input class="form-control" type="text" id="nomePet" name="Nome_Pet" placeholder=" ">
-                                    <label class="form-label" for="nomePet">Nome do Pet:</label>
-                                </div>
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="text" name="Especie" id="especie" placeholder=" ">
-                                    <label class="form-label" for="especie">Espécie:</label >
-                                </div>
-                                <div class="form-floating my-2">
-                                    <input class="form-control" type="text" id="raca" name="Raca" placeholder=" " >
-                                    <label class="form-label" for="raca">Raça:</label>
-                                </div> 
-                                <div class="form-group">
-                                    <label class="form-label mx-1" for="sexo" >Sexo:</label><br>
-                                    <label class="radio btn-group" id="sexo">
-                                    <input class="btn-check" type="radio" name="sexo" id="macho" value="Macho">
-                                    <label class="form-label btn btn-outline-secondary" for="macho">Macho</label>
-                                    <input class="btn-check" type="radio" name="sexo" id="femea" value="Femea">
-                                    <label class="form-label btn btn-outline-secondary" for="femea">Fêmea</label></label>
-                                </div> 
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="number" id="idade" name="Idade" placeholder=" ">
-                                    <label class="form-label" for="idade">Idade:</label> 
-                                </div> 
-                                <div>
-                                    <label class="radio btn-group" id="tipoIdade" >
-                                    <input class="btn-check" type="radio" name="idade" id="meses" value="Meses" >
-                                    <label class="form-label  btn btn-outline-secondary" for="meses">Meses</label>
-                                    <input class="btn-check" type="radio" name="idade" id="anos" value="Anos">
-                                    <label class="form-label  btn btn-outline-secondary" for="anos">Anos</label></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- INFORMAÇÕES ADICIONAIS -->
-                    <div class="col-12 col-lg-6 my-3">
-                        <div class="card">
-                            <div class="card-body" >
-                                <h2>Informações Adicionais</h2>
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="tel" id="TelefoneVeterinario" name="Telefone_Veterinario"  pattern="\([0-9]{2}\)[9]{1}[0-9]{}4-[0-9{4}" placeholder=" ">
-                                    <label class="form-label" for="tellVet">Contato Veterinário:</label>
-                                </div>
-                                <div class="form-floating my-2">
-                                    <input class="form-control"type="text" id="item" name="Itens_Pessoais"  placeholder=" ">
-                                    <label class="form-label" for="item">Itens Pessoais:</label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="medicamentos">Faz uso de medicamentos:</label><br>
-                                    <label class="radio btn-group" id="medicamentoSN">
-                                    <input class="btn-check" type="radio" name="medicamentos"id="fazUso" value="sim" >
-                                    <label class="form-label btn btn-outline-primary" for="fazUso">Sim</label>
-                                    <input class="btn-check" type="radio" name="medicamentos" id="naoUsa" value="nao">
-                                    <label class="form-label btn btn-outline-danger" for="naoUsa">Não</label>
-                                </div>
-                                <div class="form-label form-floating my-2">
-                                    <input class="form-control" type="text" id="medicamentos" name="Medicamentos" placeholder=" ">
-                                    <label class="form-label" for="medicamentos" >Se sim, quais?</label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="castrado">Castrado:</label><br>
-                                    <label class="radio btn-group" id="castrado">
-                                    <input class="btn-check" type="radio" name="castrado"id="sCastrado" value="sim" >
-                                    <label class="form-label btn btn-outline-primary" for="sCastrado">Sim</label>
-                                    <input class="btn-check"  type="radio" name="castrado" id="nCastrado" value="nao">
-                                    <label class="form-label btn btn-outline-danger" for="nCastrado">Não</label></label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="vacinado">Vacinado:</label><br>
-                                    <label class="radio btn-group" id="vacinado">
-                                    <input class="btn-check" type="radio" name="vacinado" id="sVacinado" value="Sim">
-                                    <label class="form-label btn btn-outline-primary" for="sVacinado">Sim</label>
-                                    <input class="btn-check" type="radio" name="vacinado" id="nVacinado" value="Nao">
-                                    <label class="form-label btn btn-outline-danger" for="nVacinado">Não</label></label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="vermifugado">Vermifugado:</label><br>
-                                    <label class="radio btn-group" id="vermifugado" >
-                                    <input class="btn-check" type="radio" name="vermifugado" id="sVermifugado" value="Sim" >
-                                    <label class="form-label btn btn-outline-primary" for="sVermifugado">Sim</label>
-                                    <input class="btn-check" type="radio" name="vermifugado" id="nVermifugado" value="Nao">
-                                    <label class="form-label btn btn-outline-danger" for="nVermifugado">Não</label></label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="prevencao">A prevenção contra pulgas e carrapatos está em dia:</label><br>
-                                    <label class="radio btn-group" id="prevencao">
-                                    <input class="btn-check" type="radio" name="Prevencao_anti_Pulgas" id="sPrevinido" value="Sim" >
-                                    <label class="form-label btn btn-outline-primary" for="sPrevinido">Sim</label>
-                                    <input class="btn-check" type="radio" name="Prevencao_anti_Pulgas" id="nPrevinido" value="Nao">
-                                    <label class="form-label btn btn-outline-danger" for="nPrevinido">Não</label></label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="sociavel">Sociável com outros animais:</label><br>
-                                    <label class="radio btn-group" id="sociavel">
-                                    <input class="btn-check" type="radio" name="sociavel" id="sSociavel" value="Sim" >
-                                    <label class="form-label btn btn-outline-primary" for="sSociavel">Sim</label>
-                                    <input class="btn-check" type="radio" name="sociavel" id="nSociavel" value="Nao">
-                                    <label class="form-label btn btn-outline-danger" for="nSociavel">Não</label></label>
-                                </div>
-                                <div class="form-floating my-2">
-                                    <textarea class="form-control" placeholder=" " name="rotina" id="rotina" cols="30" rows="3"></textarea>
-                                    <label class="form-label" for="rotina">Descreva a rotina do seu pet:</label>
-                                </div>
-                                <div class="form-group my-3">
-                                    <center>
-                                    <button type="submit" class="btn btn-primary mx-1">ENVIAR</button>
-                                    <button type="reset" class="btn btn-secondary mx-1">LIMPAR</button>
-                                    </center>
-                                </div> 
-                                <div class="alert alert-danger mensagem-alerta d-none">
-                                    Preencha o campo <span id="campo-erro"></span>!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
                             <div class="card-body sobreImg">
@@ -276,19 +126,13 @@
                                     <li>Cama, brinquedos e demais itens pessoais.</li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                    <!-- LOCALIZAÇÃO -->
-                    <div class="col-12 col-lg-6 my-3">
-                        <div class="card ">
                             <div class="card-body mapa">
                                 <h2>Como chegar</h2>
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.594555765124!2d-40.66423350000001!3d-20.358361499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b5ceea895a5f%3A0x80999c180124f50!2sHospedagem%20Pet%20da%20Regi%C3%A3o%20Serrana!5e0!3m2!1spt-BR!2sbr!4v1668640106520!5m2!1spt-BR!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div> 
-            </form>   
         </div>
     </div>
     <div class="whats">
@@ -305,5 +149,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="funcao.js"></script>
+    <script src="calculo.js"></script>
 </body>
 </html>
