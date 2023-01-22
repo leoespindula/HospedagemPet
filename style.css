@@ -87,9 +87,8 @@ form, .alert{
     margin-top: 25px;
 }
 p.botao.btn-group  {
-    margin-left: auto;
-    margin-right: auto;
-    width: max(320px, 65vw);
+   margin: 2px;
+    width: max(330px, 60vw);
     height: min(120x, 5vw);
     font-size:60px;
 }
