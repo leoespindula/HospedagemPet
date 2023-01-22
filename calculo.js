@@ -60,12 +60,12 @@ dataFim.addEventListener('change', () => {
     const diaria = calcularValor ()
     const diffInDays = calcularQuantDia()
     const horasExtras = calcHorasExtras()
-    document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
+    document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'})
 
 dataIni.addEventListener('change', () => {
     const diaria = calcularValor ()
     const diffInDays = calcularQuantDia()
     const horasExtras = calcHorasExtras()
-    document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
+    document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'})
     
 
