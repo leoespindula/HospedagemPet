@@ -12,7 +12,7 @@ function calcularQuantDia(){
 
     let diffInTime = Math.abs(end - start)
     let timeInOnDay = 1000 * 60 * 60 * 24
-    let diffInDays = Math.ceil(diffInTime / timeInOnDay)
+    let diffInDays = Math.floor(diffInTime / timeInOnDay)
     return diffInDays     
 }
 function calcHorasExtras(){
@@ -31,12 +31,20 @@ function calcHorasExtras(){
     return horasExtras
 }
 function calcularValor(){
-    let diaria = 70;
-    let vlrhr = 5 * calcHorasExtras()
+    const dataInicio = new Date(document.querySelector('#dataIni').value); 
+    var hora = dataInicio.getHours()
+    let diaria = 0;
+    let vlrhr = 3
+    if (hora > 5 && hora < 18){
+        vlrhr = 5
+    }
+    let vlrhrs = vlrhr * calcHorasExtras()
     if (calcularQuantDia() > 3){
         diaria = 60;
+    }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
+        diaria = 70;
     }
-    diaria = diaria * calcularQuantDia() + vlrhr
+    diaria = diaria * calcularQuantDia() + vlrhrs
     return diaria
 }
 

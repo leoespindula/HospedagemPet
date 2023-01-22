@@ -62,6 +62,11 @@
             transform: scale(1.1);
             transition: 0.5s;
         }
+        .form-control.valor{
+            color: rgb(0, 153, 51);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: min(25px, 5vw);
+        }
     </style>
     <!-- Imagem no URL -->
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -125,14 +130,17 @@
                                 </div>    
                                 <div class="form-floating my-2">
                                     <input class="form-control" type="datetime-local" id="dataFim" name="Data_saida" max="2023-12-31T23:59"  min="2023-01-07T00:00" placeholder=" " >
-                                    <label for="dataFim">Data e hora de saída:</label>
+                                    <label class="form-label" for="dataFim">Data e hora de saída:</label>
                                 </div> 
                                 <div class="form-floating my-2"> 
                                     <p class="alert">Entrada a partir das 07:00h, saída até as 20:00h</p>
                                 </div> 
+                                <div>
+                                    <button class="btn mb-3" type="button" id="calcular">Calcular</button>
+                                </div>
                                 <div class="form-floating my-2">
-                                    <button class="btn m-1" type="button" id="calcular">Calcular</button>
-                                    <input class="form-control" type="text" id="resultado">
+                                    <input class="form-control valor" type="text" name="Valor" id="resultado" placeholder=" ">
+                                    <label class="form-label" for="resultado">Quantidade de diárias e valor:</label>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +175,7 @@
                                     <label class="radio btn-group" id="porte">
                                     <input class="btn-check" type="radio" name="porte" id="pequeno" value="pequeno">
                                     <label class="form-label btn btn-outline-secondary" for="pequeno">Pequeno</label>
-                                    <input class="btn-check" type="radio" name="porte" id="medio" value="medio">
+                                    <input class="btn-check " type="radio" disabled name="porte" id="medio" value="medio">
                                     <label class="form-label btn btn-outline-secondary" for="medio">Médio</label></label>
                                 </div> 
                                 <div class="form-floating my-2">
@@ -265,19 +273,27 @@
                             </div>
                         </div>
                     </div>
-                    <!-- OBSERVAÇÕES -->
+                    <!-- Formas de pagamento -->
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
                             <div class="card-body">
-                                <h2>Observações</h2>
+                                <h2>Formas de Pagamento</h2>
+                                <center>
                                 <ul>
-                                    <legend>Para uma boa estadia é necessário trazer:</legend>
-                                    <li>Tapete higiênico, caso o seu pet faça as necessidades dentro de casa;</li>
-                                    <li>Fralda, caso o seu pet demarque território com frequência;</li>
-                                    <li>Ração suficiente para os dias que o animal estiver hospedado;</li>
-                                    <li>Coleira para passear;</li>
-                                    <li>Cama, brinquedos e demais itens pessoais.</li>
+                                    <legend>PIX</legend>
+                                    <p>Número de telefone: 27 999832612</p>
+                                    <a href="https://nubank.com.br/pagar/1cxyla/DsvwfrB96I" target="_blank">
+                                        <img src="pix.jpeg" alt="instagram" width="250" title="Pagamento via pix">
+                                    </a>
                                 </ul>
+                                <ul>
+                                    <legend>PicPay</legend>
+                                    <p>@maria.clara.oliveira.martins</p>
+                                    <a href="https://picpay.me/maria.clara.oliveira.martins" target="_blank">
+                                        <img src="picpay.jpeg" alt="instagram" width="250" title="Pagamento via picpay">
+                                    </a>
+                                </ul>
+                                </center>
                             </div>
                         </div>
                     </div>
