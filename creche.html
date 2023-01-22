@@ -73,19 +73,24 @@
 <body>
     <div class="cabecalho">
         <p class="introducao">Criado e admistrado por Maria Clara Olivera Martins</p>
+        <nav class="navbar navbar-expand mx-2 my-4" style="background-color: rgba(54, 54, 54, 0.767);">
+            <div class="container-fluid">
+              <!-- <a class="navbar-brand" style="color:rgb(240, 248, 255);" href="#">HOSPEDAGEM PET REGIÃO SERRANA</a> -->
+                <img src="logo.png" alt="Bootstrap" width="35" height="35">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link"  href="index.html">&nbsp;Início&nbsp;</a>
+                  <a class="nav-link" href="hospedagem.html">&nbsp;Hospedagem&nbsp;</a>
+                  <a class="nav-link active" href="creche.html">&nbsp;Creche&nbsp;</a>
+                  <a class="nav-link" href="pagamento.html">&nbsp;Pagamento&nbsp;</a>
+                </div>
+              </div>
+            </div>
+          </nav>
         <center>
             <img class="logo"src="logo.jpeg" alt="logo">
         </center>        
-        <H1>FORMULÁRIO PARA CRECHE PET</H1>
-        <div class="form-group my-3">
-            <center>
-                <p class="botao btn-group">
-                    <a class="btn btn-dark btn-lg mb-1"href="index.html"  > Pagina Inicial</a>
-                    <a class="btn btn-dark btn-lg mb-1"href="hospedagem.html"> Serviço de Hospedagem</a>
-                    <a class="btn btn-dark btn-lg mb-1 active"href="creche.html">Serviço de Creche</a>
-                </p>
-            </center>
-        </div> 
+        <H1>FORMULÁRIO PARA CRECHE PET</H1> 
     </div>
     <div class="conteudo">
         <div class="container">
@@ -121,8 +126,8 @@
                                     <input class="form-control"type="date" id="dataIni" name="Data_entrada" max="2023-12-31" placeholder=" " min="2023-01-07" value="2023-12-30" >
                                     <label for="dataIni">Data Desejada:</label>
                                     <div class="form-floating my-2"> 
-                                        <p class="alert">Entrada a partir das 08:00h, saída até as 18:00<br>
-                                        Valor Fixo R$50,00</p>
+                                        <p class="alert ">Entrada a partir das 08:00h<br>Saída até as 18:00h</p>
+                                        <p class="alert" style="color: rgb(0, 153, 51); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Valor Fixo R$50,00</p>
                                     </div> 
                                 </div>    
                             </div>

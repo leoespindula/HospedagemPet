@@ -77,18 +77,25 @@
 <body>
     <div class="cabecalho">
         <p class="introducao">Criado e admistrado por Maria Clara Olivera Martins</p>
+        <nav class="navbar navbar-expand mx-2 my-4" style="background-color: rgba(54, 54, 54, 0.767);">
+            <div class="container-fluid">
+              <!-- <a class="navbar-brand" style="color:rgb(240, 248, 255);" href="#">HOSPEDAGEM PET REGIÃO SERRANA</a> -->
+                <img src="logo.png" alt="Bootstrap" width="35" height="35">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link"  href="index.html">&nbsp;Início&nbsp;</a>
+                  <a class="nav-link active" href="hospedagem.html">&nbsp;Hospedagem&nbsp;</a>
+                  <a class="nav-link" href="creche.html">&nbsp;Creche&nbsp;</a>
+                  <a class="nav-link" href="pagamento.html">&nbsp;Pagamento&nbsp;</a>
+                </div>
+              </div>
+            </div>
+          </nav>
         <center>
             <img class="logo"src="logo.jpeg" alt="logo">
         </center>        
         <H1>FORMULÁRIO PARA HOSPEDAGEM PET</H1>
         <div class="form-group my-3">
-            <center>
-                <p class="botao btn-group">
-                    <a class="btn btn-dark btn-lg mb-1" href="index.html"> Pagina Inicial</a>
-                    <a class="btn btn-dark btn-lg mb-1 active" href="hospedagem.html"> Serviço de Hospedagem</a>
-                    <a class="btn btn-dark btn-lg mb-1" href="creche.html">Serviço de Creche</a>
-                </p>
-            </center>
         </div> 
     </div>
     <div class="conteudo">
@@ -135,9 +142,9 @@
                                 <div class="form-floating my-2"> 
                                     <p class="alert">Entrada a partir das 07:00h, saída até as 20:00h</p>
                                 </div> 
-                                <div>
+                                <!-- <div>
                                     <button class="btn btn-success mb-3" type="button" id="calcular">Calcular</button>
-                                </div>
+                                </div> -->
                                 <div class="form-floating my-2">
                                     <input class="form-control valor" type="text" name="Valor" id="resultado" placeholder=" ">
                                     <label class="form-label" for="resultado">Quantidade de diárias e valor:</label>

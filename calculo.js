@@ -1,5 +1,6 @@
-
-const calcular = document.querySelector('#calcular')
+const dataFim = document.querySelector('#dataFim')
+const dataIni = document.querySelector('#dataIni')
+// const calcular = document.querySelector('#calcular')
 
 function calcularQuantDia(){
 
@@ -49,9 +50,22 @@ function calcularValor(){
 }
 
 
-calcular.addEventListener('click', () => {
+// calcular.addEventListener('click', () => {
+//     const diaria = calcularValor ()
+//     const diffInDays = calcularQuantDia()
+//     const horasExtras = calcHorasExtras()
+//     document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
+
+dataFim.addEventListener('change', () => {
     const diaria = calcularValor ()
     const diffInDays = calcularQuantDia()
     const horasExtras = calcHorasExtras()
     document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
+
+dataIni.addEventListener('change', () => {
+    const diaria = calcularValor ()
+    const diffInDays = calcularQuantDia()
+    const horasExtras = calcHorasExtras()
+    document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
+    
 

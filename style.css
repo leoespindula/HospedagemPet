@@ -95,3 +95,17 @@ p.botao.btn-group  {
 ul.pagamento{
     padding: 0%;
 }
+a.nav-link{
+    color: white;
+    font-size: min(22px, 3vw);
+}
+a.nav-link.active{
+    color: rgb(24, 104, 253) !important;
+    font-size: min(24px, 3.1vw);
+}
+a.nav-link:hover{
+    color: white;
+    transform: scale(1.2);
+    transition: 0.3s;
+    
+}

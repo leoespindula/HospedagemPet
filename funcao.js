@@ -1,10 +1,10 @@
 $('#formulario').submit(function(){
     var nomeTutor = $('#nomeTutor');
     var erro = $('.msg.alert');
-    var result = $('.result.alert');
-    var calcular = $('#calcular')
+    // var result = $('.result.alert');
+    // var calcular = $('#calcular')
     var campo = $('#campo-erro');
-    var resultado = $('#campo-resultado');
+    // var resultado = $('#campo-resultado');
     var telefone = $('#tell');
     var nomePet = $('#nomePet');
     var especie = $('#especie');
@@ -195,15 +195,15 @@ $('#formulario').submit(function(){
         sociavel.addClass('is-invalid form-control');
         return false;
     }
-    else if(resultado.val() == ''){
-        result.removeClass('d-none');
-        resultado.focus();
-        resultado.addClass('is-invalid');
-        calcular.removeClass('btn-success');
-        calcular.addClass('btn-danger')
-        calcular.addClass('is-invalid');
-        return false;
-    }
+    // else if(resultado.val() == ''){
+    //     result.removeClass('d-none');
+    //     resultado.focus();
+    //     resultado.addClass('is-invalid');
+    //     calcular.removeClass('btn-success');
+    //     calcular.addClass('btn-danger')
+    //     calcular.addClass('is-invalid');
+    //     return false;
+    // }
     
     else{
         return true;
