@@ -92,3 +92,6 @@ p.botao.btn-group  {
     height: min(120x, 5vw);
     font-size:60px;
 }
+ul.pagamento{
+    padding: 0%;
+}
