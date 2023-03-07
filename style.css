@@ -109,3 +109,16 @@ a.nav-link:hover{
     transition: 0.3s;
     
 }
+
+::-webkit-scrollbar{
+    width: 18px;
+}
+
+::-webkit-scrollbar-track{
+   background-image:url(/img/2.png);
+    background-color: #888;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 35px;
+    background-color: rgb(24, 104, 253);
+}
