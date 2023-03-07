@@ -22,7 +22,7 @@ iframe:hover{
 h1{
     text-align: center;
     color: white;
-    background: radial-gradient(circle, rgba(35, 23, 159, 0.849) 0%, rgba(0, 0, 0, 0.707) 90%);
+    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
     border-radius: 50px;
     font-family: 'Asul', sans-serif;
     font-size: max(30px, 3.2vw);
@@ -74,7 +74,7 @@ form, .alert{
 .introducao{
     color: white;
     width:max(205px, 26vw);
-    background: radial-gradient(circle, rgba(35, 23, 159, 0.849) 0%, rgba(0, 0, 0, 0.707) 100%);
+    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
     border-radius: 50px;
     padding-left: 10px;
     padding-right: 10px;
@@ -96,12 +96,13 @@ ul.pagamento{
     padding: 0%;
 }
 a.nav-link{
-    color: white;
+    color: rgb(195, 195, 195);
     font-size: min(25px, 3.5vw);
+    transition: 0.3s;
 }
 a.nav-link.active{
-    color: rgb(24, 104, 253) !important;
-    font-size: min(26px, 3.7vw);
+    color: rgb(255, 255, 255) !important;
+    font-size: min(29px, 3.8vw);
 }
 a.nav-link:hover{
     color: white;
@@ -122,5 +123,5 @@ a.nav-link:hover{
 ::-webkit-scrollbar-thumb{
     border-radius: 70px;
     /* background: linear-gradient(90deg, rgb(33, 151, 225) 0%, rgb(255, 255, 255) 50%, rgb(251, 0, 255) 100%); */
-    background: radial-gradient(circle, rgba(35, 23, 159, 0.849) 0%, rgba(0, 0, 0, 0.707) 90%);
+    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
 }
