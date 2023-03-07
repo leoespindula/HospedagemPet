@@ -115,10 +115,12 @@ a.nav-link:hover{
 }
 
 ::-webkit-scrollbar-track{
-   background-image:url(/img/2.png);
+   /* background-image:url(/img/2.png); */
+   background: radial-gradient(circle, rgb(21, 21, 21) 0%, rgb(88, 88, 88) 100%);
     background-color: #888;
 }
 ::-webkit-scrollbar-thumb{
-    border-radius: 35px;
-    background-color: rgb(24, 104, 253);
+    border-radius: 70px;
+    /* background: linear-gradient(90deg, rgb(33, 151, 225) 0%, rgb(255, 255, 255) 50%, rgb(251, 0, 255) 100%); */
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
