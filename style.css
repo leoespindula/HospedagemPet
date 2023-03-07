@@ -116,8 +116,9 @@ a.nav-link:hover{
 }
 
 ::-webkit-scrollbar-track{
-   background-image:url(/img/2.png);
+   /* background-image:url(/img/2.png); */
    /* background: radial-gradient(circle, rgb(63, 63, 63) 0%, rgb(88, 88, 88) 100%); */
+   background-color: #666;
     
 }
 ::-webkit-scrollbar-thumb{
