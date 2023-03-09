@@ -108,7 +108,7 @@ a.nav-link.active{
 }
 a.nav-link:hover{
     color: white;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: 0.3s;
     
 }
@@ -127,3 +127,25 @@ a.nav-link:hover{
     border-radius: 70px;
     background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
 }
+
+nav a{
+    position: relative;
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+
