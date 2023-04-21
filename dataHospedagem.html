@@ -67,6 +67,11 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: min(25px, 5vw);
         }
+        .form-control.dataInvalid{
+            color: rgb(221, 52, 36);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: min(25px, 5vw);
+        }
     </style>
     <!-- Imagem no URL -->
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -77,7 +82,7 @@
 <body>
     <div class="cabecalho">
         <p class="introducao">Criada e admistrada por Maria Clara Olivera Martins</p>
-        <nav class="navbar navbar-expand mx-2 my-4" style="background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 30%, rgba(0, 0, 0, 0.707) 90%); border-radius: 60px;">
+        <nav class="navbar navbar-expand mx-2 my-4" style="background: radial-gradient(circle, rgba(38, 27, 75, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%); border-radius: 60px;">
             <div class="container-fluid">
               <!-- <a class="navbar-brand" style="color:rgb(240, 248, 255);" href="#">HOSPEDAGEM PET REGIÃO SERRANA</a> -->
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -130,14 +135,16 @@
                                     <label class="form-label" for="dataFim">Data e hora de saída:</label>
                                 </div> 
                                 <div class="form-floating my-3"> 
-                                    <p class="alert">Entrada a partir das 07:00h<br>Saída até as 20:00h</p>
+                                    <p class="alert">Entrada a partir das 08:00h<br>Saída até as 20:00h</p>
                                 </div> 
                                 <!-- <div>
                                     <button class="btn btn-success mb-3" type="button" id="calcular">Calcular</button>
                                 </div> -->
                                 <div class="form-floating my-3">
-                                    <input class="form-control valor" type="text" name="Valor" id="resultado" placeholder=" ">
-                                    <label class="form-label" for="resultado">Quantidade de diárias e valor:</label>
+                                    <input class="form-control valor d-none" type="text" name="Valor" id="resultado" placeholder=" ">
+                                    <label class="form-label d-none" for="resultado" id="result" >Quantidade de diárias e valor:</label>
+                                    <input class="form-control dataInvalid d-none" type="text" name="Valor" id="dataInvalida" placeholder=" ">
+                                    <label class="form-label d-none" for="dataInvalida" id="valid">Selecione um horario válido</label>
                                 </div>
                                 <div class="form-group mt-5">
                                     <center>

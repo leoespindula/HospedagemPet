@@ -24,7 +24,7 @@ iframe:hover{
 h1{
     text-align: center;
     color: white;
-    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
+    background: radial-gradient(circle, rgba(38, 27, 75, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
     border-radius: 50px;
     font-family: 'Asul', sans-serif;
     font-size: max(30px, 3.2vw);
@@ -76,7 +76,7 @@ form, .alert{
 .introducao{
     color: white;
     width:max(205px, 26vw);
-    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
+    background: radial-gradient(circle, rgba(38, 27, 75, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
     border-radius: 50px;
     padding-left: 10px;
     padding-right: 10px;
@@ -125,7 +125,7 @@ a.nav-link:hover{
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 70px;
-    background: radial-gradient(circle, rgba(20, 138, 110, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
+    background: radial-gradient(circle, rgba(38, 27, 75, 0.692) 0%, rgba(0, 0, 0, 0.707) 90%);
 }
 
 nav a{

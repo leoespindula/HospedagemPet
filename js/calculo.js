@@ -1,6 +1,14 @@
+function entrada(){
+    const dataInicio = new Date(document.querySelector('#dataIni').value); 
+    let horarioInvalido = true;
+    var hora = dataInicio.getHours()
+    if (hora > 7 && hora < 20){
+        horarioInvalido = false;
+    }
+    return horarioInvalido
+}
 const dataFim = document.querySelector('#dataFim')
 const dataIni = document.querySelector('#dataIni')
-// const calcular = document.querySelector('#calcular')
 
 function calcularQuantDia(){
 
@@ -39,6 +47,7 @@ function calcularValor(){
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
+   
     let vlrhrs = vlrhr * calcHorasExtras()
     if (calcularQuantDia() > 3){
         diaria = 60;
@@ -49,23 +58,57 @@ function calcularValor(){
     return diaria
 }
 
-
-// calcular.addEventListener('click', () => {
-//     const diaria = calcularValor ()
-//     const diffInDays = calcularQuantDia()
-//     const horasExtras = calcHorasExtras()
-//     document.getElementById('resultado').value = diffInDays +' diárias e '+horasExtras+' horas, R$'+diaria+',00'})
-
 dataFim.addEventListener('change', () => {
+    const horaInvalida = entrada()
     const diaria = calcularValor ()
     const diffInDays = calcularQuantDia()
     const horasExtras = calcHorasExtras()
-    document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'})
+    document.getElementById('dataInvalida').classList.add('d-none');
+    document.getElementById('valid').classList.add('d-none');
+    document.getElementById('resultado').classList.add('d-none');
+    document.getElementById('result').classList.add('d-none');
+    $('.is-invalid').removeClass('is-invalid');
+    
+    if(horaInvalida){
+        document.getElementById('dataInvalida').value = 'Entrada permitida a partir das 08:00h as 20:00h'
+        document.getElementById('dataInvalida').classList.add('is-invalid');
+        document.getElementById('dataIni').classList.add('is-invalid');
+        document.getElementById('dataInvalida').classList.remove('d-none');
+        document.getElementById('valid').classList.remove('d-none');
+    }
+    else{
+        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
+    }
+})
 
 dataIni.addEventListener('change', () => {
+    const horaInvalida = entrada()
     const diaria = calcularValor ()
     const diffInDays = calcularQuantDia()
     const horasExtras = calcHorasExtras()
-    document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'})
+    document.getElementById('dataInvalida').classList.add('d-none');
+    document.getElementById('valid').classList.add('d-none');
+    document.getElementById('resultado').classList.add('d-none');
+    document.getElementById('result').classList.add('d-none');
+    $('.is-invalid').removeClass('is-invalid');
+    
+    if(horaInvalida){
+        document.getElementById('dataInvalida').value = 'Entrada permitida a partir das 08:00h as 20:00h'
+        document.getElementById('dataInvalida').classList.add('is-invalid');
+        document.getElementById('dataIni').classList.add('is-invalid');
+        document.getElementById('dataInvalida').classList.remove('d-none');
+        document.getElementById('valid').classList.remove('d-none');
+    }
+    else{
+        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
+    }
+    
+
+})
+    
     
 
