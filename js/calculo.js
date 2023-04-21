@@ -49,12 +49,21 @@ function calcularValor(){
     }
    
     let vlrhrs = vlrhr * calcHorasExtras()
-    if (calcularQuantDia() > 3){
+
+    if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
+        diaria = 50
+    }
+    else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
+        diaria = 70
+    }
+    else if (calcularQuantDia() > 3){
         diaria = 60;
+        diaria = diaria * calcularQuantDia() + vlrhrs
     }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
         diaria = 70;
+        diaria = diaria * calcularQuantDia() + vlrhrs
     }
-    diaria = diaria * calcularQuantDia() + vlrhrs
+        // diaria = diaria * calcularQuantDia() + vlrhrs
     return diaria
 }
 
@@ -75,6 +84,11 @@ dataFim.addEventListener('change', () => {
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
         document.getElementById('valid').classList.remove('d-none');
+    }
+    else if(diffInDays < 1){
+        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
     }
     else{
         document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
@@ -100,6 +114,11 @@ dataIni.addEventListener('change', () => {
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
         document.getElementById('valid').classList.remove('d-none');
+    }
+    else if(diffInDays < 1){
+        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
     }
     else{
         document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
