@@ -79,7 +79,7 @@ dataFim.addEventListener('change', () => {
     $('.is-invalid').removeClass('is-invalid');
     
     if(horaInvalida){
-        document.getElementById('dataInvalida').value = 'Entrada permitida a partir das 08:00h as 20:00h'
+        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
         document.getElementById('dataInvalida').classList.add('is-invalid');
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
@@ -109,7 +109,7 @@ dataIni.addEventListener('change', () => {
     $('.is-invalid').removeClass('is-invalid');
     
     if(horaInvalida){
-        document.getElementById('dataInvalida').value = 'Entrada permitida a partir das 08:00h as 20:00h'
+        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
         document.getElementById('dataInvalida').classList.add('is-invalid');
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
