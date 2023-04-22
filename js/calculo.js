@@ -77,6 +77,9 @@ dataFim.addEventListener('change', () => {
     document.getElementById('resultado').classList.add('d-none');
     document.getElementById('result').classList.add('d-none');
     $('.is-invalid').removeClass('is-invalid');
+    document.getElementById('submit').disabled = false;
+    document.getElementById('submit').classList.remove('btn-danger')
+    document.getElementById('submit').classList.add('btn-primary')
     
     if(horaInvalida){
         document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
@@ -84,6 +87,9 @@ dataFim.addEventListener('change', () => {
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
         document.getElementById('valid').classList.remove('d-none');
+        document.getElementById('submit').disabled = true;
+        document.getElementById('submit').classList.add('btn-danger')
+        document.getElementById('submit').classList.remove('btn-primary')
     }
     else if(diffInDays < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
@@ -107,6 +113,9 @@ dataIni.addEventListener('change', () => {
     document.getElementById('resultado').classList.add('d-none');
     document.getElementById('result').classList.add('d-none');
     $('.is-invalid').removeClass('is-invalid');
+    document.getElementById('submit').disabled = false;
+    document.getElementById('submit').classList.remove('btn-danger')
+    document.getElementById('submit').classList.add('btn-primary')
     
     if(horaInvalida){
         document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
@@ -114,6 +123,9 @@ dataIni.addEventListener('change', () => {
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
         document.getElementById('valid').classList.remove('d-none');
+        document.getElementById('submit').disabled = true;
+        document.getElementById('submit').classList.add('btn-danger')
+        document.getElementById('submit').classList.remove('btn-primary')
     }
     else if(diffInDays < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
