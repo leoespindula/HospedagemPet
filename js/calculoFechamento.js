@@ -67,13 +67,8 @@ function calcularValor(){
     return diaria
 }
 
-dataIni.addEventListener('change', () => {
-    const horaInvalida = entrada()
-    const diaria = calcularValor ()
-    const fraldas = calcQuantFralda()
-    const total = diaria + fraldas
-    const diffInDays = calcularQuantDia()
-    const horasExtras = calcHorasExtras()
+
+function atualizarCampos() {
     document.getElementById('dataInvalida').classList.add('d-none');
     document.getElementById('valid').classList.add('d-none');
     document.getElementById('resultado').classList.add('d-none');
@@ -83,7 +78,7 @@ dataIni.addEventListener('change', () => {
     document.getElementById('submit').classList.remove('btn-danger')
     document.getElementById('submit').classList.add('btn-primary')
     
-    if(horaInvalida){
+    if(entrada()){
         document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
         document.getElementById('dataInvalida').classList.add('is-invalid');
         document.getElementById('dataIni').classList.add('is-invalid');
@@ -93,10 +88,10 @@ dataIni.addEventListener('change', () => {
         document.getElementById('submit').classList.add('btn-danger')
         document.getElementById('submit').classList.remove('btn-primary')
     }
-    else if(diffInDays < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00';
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
+    else if(calcularQuantDia() < 1){
+        document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda())+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
@@ -105,9 +100,9 @@ dataIni.addEventListener('change', () => {
         document.getElementById('resultTotal').classList.remove('d-none');
     }
     else{
-        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
+        document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda())+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
@@ -115,108 +110,19 @@ dataIni.addEventListener('change', () => {
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
-})
+}
+
+dataIni.addEventListener('change', () => {
+    atualizarCampos();
+});
 
 dataFim.addEventListener('change', () => {
-    const horaInvalida = entrada()
-    const diaria = calcularValor ()
-    const fraldas = calcQuantFralda()
-    const total = diaria + fraldas
-    const diffInDays = calcularQuantDia()
-    const horasExtras = calcHorasExtras()
-    document.getElementById('dataInvalida').classList.add('d-none');
-    document.getElementById('valid').classList.add('d-none');
-    document.getElementById('resultado').classList.add('d-none');
-    document.getElementById('result').classList.add('d-none');
-    $('.is-invalid').removeClass('is-invalid');
-    document.getElementById('submit').disabled = false;
-    document.getElementById('submit').classList.remove('btn-danger')
-    document.getElementById('submit').classList.add('btn-primary')
-    
-    if(horaInvalida){
-        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
-        document.getElementById('dataInvalida').classList.add('is-invalid');
-        document.getElementById('dataIni').classList.add('is-invalid');
-        document.getElementById('dataInvalida').classList.remove('d-none');
-        document.getElementById('valid').classList.remove('d-none');
-        document.getElementById('submit').disabled = true;
-        document.getElementById('submit').classList.add('btn-danger')
-        document.getElementById('submit').classList.remove('btn-primary')
-    }
-    else if(diffInDays < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00';
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-        document.getElementById('resultadoFralda').classList.remove('d-none');
-        document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('total').classList.remove('d-none');
-        document.getElementById('resultTotal').classList.remove('d-none');
-    }
-    else{
-        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-        document.getElementById('resultadoFralda').classList.remove('d-none');
-        document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('total').classList.remove('d-none');
-        document.getElementById('resultTotal').classList.remove('d-none');
-    }
-})
-
+    atualizarCampos();
+});
 
 adicionais.addEventListener('change', () => {
-    const horaInvalida = entrada()
-    const diaria = calcularValor ()
-    const fraldas = calcQuantFralda()
-    const total = diaria + fraldas
-    const diffInDays = calcularQuantDia()
-    const horasExtras = calcHorasExtras()
-    document.getElementById('dataInvalida').classList.add('d-none');
-    document.getElementById('valid').classList.add('d-none');
-    document.getElementById('resultado').classList.add('d-none');
-    document.getElementById('result').classList.add('d-none');
-    $('.is-invalid').removeClass('is-invalid');
-    document.getElementById('submit').disabled = false;
-    document.getElementById('submit').classList.remove('btn-danger')
-    document.getElementById('submit').classList.add('btn-primary')
-    
-    if(horaInvalida){
-        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
-        document.getElementById('dataInvalida').classList.add('is-invalid');
-        document.getElementById('dataIni').classList.add('is-invalid');
-        document.getElementById('dataInvalida').classList.remove('d-none');
-        document.getElementById('valid').classList.remove('d-none');
-        document.getElementById('submit').disabled = true;
-        document.getElementById('submit').classList.add('btn-danger')
-        document.getElementById('submit').classList.remove('btn-primary')
-    }
-    else if(diffInDays < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00';
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-        document.getElementById('resultadoFralda').classList.remove('d-none');
-        document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('total').classList.remove('d-none');
-        document.getElementById('resultTotal').classList.remove('d-none');
-    }
-    else{
-        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(fraldas/2)+ ',  R$'+fraldas+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+total+',00';
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-        document.getElementById('resultadoFralda').classList.remove('d-none');
-        document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('total').classList.remove('d-none');
-        document.getElementById('resultTotal').classList.remove('d-none');
-    }
-})
+    atualizarCampos();
+});
 
 function goToWhatsapp() {
     var name = document.getElementById("nomePet").value;

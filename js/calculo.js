@@ -63,15 +63,10 @@ function calcularValor(){
         diaria = 70;
         diaria = diaria * calcularQuantDia() + vlrhrs
     }
-        // diaria = diaria * calcularQuantDia() + vlrhrs
     return diaria
 }
 
-dataFim.addEventListener('change', () => {
-    const horaInvalida = entrada()
-    const diaria = calcularValor ()
-    const diffInDays = calcularQuantDia()
-    const horasExtras = calcHorasExtras()
+function atualizarCampos() {
     document.getElementById('dataInvalida').classList.add('d-none');
     document.getElementById('valid').classList.add('d-none');
     document.getElementById('resultado').classList.add('d-none');
@@ -81,7 +76,7 @@ dataFim.addEventListener('change', () => {
     document.getElementById('submit').classList.remove('btn-danger')
     document.getElementById('submit').classList.add('btn-primary')
     
-    if(horaInvalida){
+    if(entrada()){
         document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
         document.getElementById('dataInvalida').classList.add('is-invalid');
         document.getElementById('dataIni').classList.add('is-invalid');
@@ -91,53 +86,25 @@ dataFim.addEventListener('change', () => {
         document.getElementById('submit').classList.add('btn-danger')
         document.getElementById('submit').classList.remove('btn-primary')
     }
-    else if(diffInDays < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
+    else if(calcularQuantDia() < 1){
+        document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00'
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
     }
     else{
-        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
+        document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
     }
-})
+}
 
 dataIni.addEventListener('change', () => {
-    const horaInvalida = entrada()
-    const diaria = calcularValor ()
-    const diffInDays = calcularQuantDia()
-    const horasExtras = calcHorasExtras()
-    document.getElementById('dataInvalida').classList.add('d-none');
-    document.getElementById('valid').classList.add('d-none');
-    document.getElementById('resultado').classList.add('d-none');
-    document.getElementById('result').classList.add('d-none');
-    $('.is-invalid').removeClass('is-invalid');
-    document.getElementById('submit').disabled = false;
-    document.getElementById('submit').classList.remove('btn-danger')
-    document.getElementById('submit').classList.add('btn-primary')
-    
-    if(horaInvalida){
-        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
-        document.getElementById('dataInvalida').classList.add('is-invalid');
-        document.getElementById('dataIni').classList.add('is-invalid');
-        document.getElementById('dataInvalida').classList.remove('d-none');
-        document.getElementById('valid').classList.remove('d-none');
-        document.getElementById('submit').disabled = true;
-        document.getElementById('submit').classList.add('btn-danger')
-        document.getElementById('submit').classList.remove('btn-primary')
-    }
-    else if(diffInDays < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+diaria+',00'
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-    }
-    else{
-        document.getElementById('resultado').value = diffInDays +' diária(s) e '+horasExtras+' hora(s), R$'+diaria+',00'
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
-    }
-})
+    atualizarCampos();
+});
+
+dataFim.addEventListener('change', () => {
+    atualizarCampos();
+});
     
     
 
