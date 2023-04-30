@@ -137,8 +137,6 @@ dataIni.addEventListener('change', () => {
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
     }
-    
-
 })
     
     
