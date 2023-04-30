@@ -226,7 +226,7 @@ function goToWhatsapp() {
     var valorF = document.getElementById("resultadoFralda").value;
     var valorT = document.getElementById("total").value;
 
-    var url = "https://wa.me/5527999832612?text="
+    var url = "https://wa.me/?text="
     + "Nome: " + name + "%0a"
     + "Data entrada: " + dateIni + "%0a"
     + "Data saída: " + dateFim + "%0a"
