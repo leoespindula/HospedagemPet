@@ -106,5 +106,28 @@ dataFim.addEventListener('change', () => {
     atualizarCampos();
 });
     
-    
+    // Datas indisponiveis temporário
+
+    var dateEntrada = document.getElementById('dataIni');
+        var dateSaida = document.getElementById('dataFim');
+        var FeriadoOn = new Date('2023-06-07');
+        var FeriadoOff = new Date('2023-06-11');
+        var casamentoOn = new Date('2023-06-02');
+        var casamentoOff = new Date('2023-06-05');
+
+        dateEntrada.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if ((selectedDate >= FeriadoOn && selectedDate <= FeriadoOff)||(selectedDate >= casamentoOn && selectedDate <= casamentoOff)) {
+            this.value = '';
+            alert('Infelizmente a data selecionada não esta disponível.');
+        }
+        });
+
+        dateSaida.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if ((selectedDate >= FeriadoOn && selectedDate <= FeriadoOff)||(selectedDate >= casamentoOn && selectedDate <= casamentoOff)) {
+            this.value = '';
+            alert('Infelizmente a data selecionada não esta disponível.');
+        }
+        });
 
