@@ -108,24 +108,24 @@ dataFim.addEventListener('change', () => {
     
     // Datas indisponiveis temporário
 
-    var dateEntrada = document.getElementById('dataIni');
-        var dateSaida = document.getElementById('dataFim');
-        var FeriadoOn = new Date('2023-06-02');
-        var FeriadoOff = new Date('2023-06-11');
+    // var dateEntrada = document.getElementById('dataIni');
+    //     var dateSaida = document.getElementById('dataFim');
+    //     var FeriadoOn = new Date('2023-06-02');
+    //     var FeriadoOff = new Date('2023-06-11');
 
-        dateEntrada.addEventListener('input', function() {
-        var selectedDate = new Date(this.value);
-        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-            this.value = '';
-            alert('Vagas esgotadas para o período do dia 02/06 a 10/06. Gratos pela compreensão!');
-        }
-        });
+    //     dateEntrada.addEventListener('input', function() {
+    //     var selectedDate = new Date(this.value);
+    //     if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+    //         this.value = '';
+    //         alert('Vagas esgotadas para o período do dia 02/06 a 10/06. Gratos pela compreensão!');
+    //     }
+    //     });
 
-        dateSaida.addEventListener('input', function() {
-        var selectedDate = new Date(this.value);
-        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-            this.value = '';
-            alert('Vagas esgotadas para o período do dia 02/06 a 10/06. Gratos pela compreensão!');
-        }
-        });
+    //     dateSaida.addEventListener('input', function() {
+    //     var selectedDate = new Date(this.value);
+    //     if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+    //         this.value = '';
+    //         alert('Vagas esgotadas para o período do dia 02/06 a 10/06. Gratos pela compreensão!');
+    //     }
+    //     });
 
