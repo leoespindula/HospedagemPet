@@ -47,8 +47,18 @@ function calcularValor(){
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
-   
-    let vlrhrs = vlrhr * calcHorasExtras()
+    let vlrhrs = 0
+    
+    if(calcHorasExtras() > 12){
+        if (calcularQuantDia() > 3){
+            vlrhrs = 60;
+        }else{
+            vlrhrs = 70
+        }       
+    }
+    else{
+        vlrhrs = vlrhr * calcHorasExtras()
+    }
 
     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
         diaria = 50
