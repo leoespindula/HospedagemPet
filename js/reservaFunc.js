@@ -45,6 +45,7 @@ function calcularValor(){
     var hora = dataInicio.getHours()
     let diaria = 0;
     let vlrhr = 3
+    var portePq = document.getElementById('portePq');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
@@ -63,17 +64,41 @@ function calcularValor(){
     }
 
     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
-        diaria = 50
+        if(portePq.checked == true){
+            diaria = 50;
+        }
+        else{
+            diaria = 70;
+        } 
     }
     else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
-        diaria = 70
+        if(portePq.checked == true){
+            diaria = 70;
+        }
+        else{
+            diaria = 90;
+        } 
     }
     else if (calcularQuantDia() > 3){
-        diaria = 60;
+        
+        if(portePq.checked == true){
+            diaria = 60;
         diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 80;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        } 
     }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
-        diaria = 70;
-        diaria = diaria * calcularQuantDia() + vlrhrs
+        
+        if(portePq.checked == true){
+            diaria = 70;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 90;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
     }
     return diaria
 }
@@ -139,6 +164,9 @@ $('#dataHospedagem').submit(function(){
     var dataFim = $('#dataFim');
     var campo = $('#campo-erro');
     var itens = $('#item');
+    var portePq = document.getElementById('portePq');
+    var porteGr = document.getElementById('porteGr');
+    var porte = $('#porte');
     
     erro.addClass('d-none');
     $('.is-invalid').removeClass('is-invalid');
@@ -158,6 +186,14 @@ $('#dataHospedagem').submit(function(){
         itens.focus();
         itens.addClass('is-invalid');
         return false;
+    }
+
+    else if(portePq.checked == false && porteGr.checked == false){
+        erro.removeClass('d-none');
+        campo.html('Porte');
+        porte.focus();
+        porte.addClass('is-invalid form-control');
+        return false;    
     }
 
     else if(dataIni.val() == ''){

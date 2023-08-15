@@ -89,7 +89,6 @@
                 <div class="navbar-nav mx-auto text-center">
                   <a class="nav-link"  href="index.html">&nbsp;Início&nbsp;</a>
                   <a class="nav-link active" href="hospedagem.html">&nbsp;Hospedagem&nbsp;</a>
-                  <a class="nav-link" href="creche.html">&nbsp;Creche&nbsp;</a>
                   <a class="nav-link" href="pagamento.html">&nbsp;Pagamento&nbsp;</a>
                 </div>
               </div>
@@ -117,6 +116,14 @@
                                     <input class="form-control"type="text" id="item" name="Itens_Pessoais"  placeholder=" ">
                                     <label class="form-label" for="item">Itens Pessoais:</label>
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-label mx-1" for="porte" >Porte:</label><br>
+                                    <label class="radio btn-group" id="porte">
+                                    <input class="btn-check" type="radio" name="porte" id="portePq" value="pequeno">
+                                    <label class="form-label btn btn-outline-secondary" for="portePq">Pequeno</label>
+                                    <input class="btn-check " type="radio" name="porte" id="porteGr" value="medio">
+                                    <label class="form-label btn btn-outline-secondary" for="porteGr">Médio/Grande</label></label> 
+                                </div> 
                                 <div class="form-floating my-3">
                                     <input class="form-control"type="datetime-local" id="dataIni" name="Data_entrada" max="2023-12-31T23:59" placeholder=" " min="2023-01-07T00:00" >
                                     <label for="dataIni">Data e hora de entrada:</label>
@@ -148,8 +155,8 @@
             <div id="popup" class="popup">
                 <div class="popup-content">
                     <h2>AVISO!</h2>
-                    <p>A reserva só será validada mediante o pagamento de 50% do valor.</p>
-                    <p>Caso haja desistência, o valor pago não será reembolsado.</p>
+                    <p>A reserva só será efetivada mediante o pagamento de 50% do valor.</p>
+                    <p>Caso haja desistência, o valor pago não será reembolsado. Grata pela compreensão.</p>
                     <button class="popupMsg btn mb-2" onclick="closePopup()">Estou ciente</button>
                 </div>
             </div>    
