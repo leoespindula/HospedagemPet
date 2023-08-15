@@ -10,6 +10,7 @@ function entrada(){
 const dataFim = document.querySelector('#dataFim')
 const dataIni = document.querySelector('#dataIni')
 const adicionais = document.querySelector('#fralda')
+const banhos = document.querySelector('#banho')
 
 function calcularQuantDia(){
 
@@ -102,22 +103,28 @@ function atualizarCampos() {
     else if(calcularQuantDia() < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda())+',00';
+        document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
+        document.getElementById('resultadoBanho').classList.remove('d-none');
+        document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
     else{
         document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda())+',00';
+        document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
+        document.getElementById('resultadoBanho').classList.remove('d-none');
+        document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
@@ -135,12 +142,17 @@ adicionais.addEventListener('change', () => {
     atualizarCampos();
 });
 
+banhos.addEventListener('change', () => {
+    atualizarCampos();
+});
+
 function goToWhatsapp() {
     var name = document.getElementById("nomePet").value;
     var dateIni = document.getElementById("dataIni").value;
     var dateFim = document.getElementById("dataFim").value;
     var valorD = document.getElementById("resultado").value;
     var valorF = document.getElementById("resultadoFralda").value;
+    var valorB = document.getElementById("resultadoBanho").value;
     var valorT = document.getElementById("total").value;
 
     var url = "https://wa.me/?text="
@@ -149,6 +161,7 @@ function goToWhatsapp() {
     + "Data saída: " + dateFim + "%0a"
     + "Diárias e valor: " + valorD + "%0a"
     + "Fralda/Tapete higiênico: " + valorF + "%0a"
+    + "Banho: " + valorB + "%0a"
     + valorT + "%0a";
 
     window.open(url, '_blank').focus();
@@ -161,6 +174,15 @@ function calcQuantFralda(){
     let totalFraldas = (qntFralda * valor)
     
     return totalFraldas
+}
+
+function calcQuantBanho(){
+    const qntBanho = document.getElementById('banho').value;
+    const valor = 50
+
+    let totalBanho = (qntBanho * valor)
+    
+    return totalBanho
 }
     
     
