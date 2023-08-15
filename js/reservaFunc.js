@@ -157,7 +157,7 @@ function closePopup() {
     window.location.href = 'https://leoespindula.github.io/HospedagemPet/pagamento.html';
 }
 
-$('#dataHospedagem').submit(function(){
+$('#formulario').submit(function(){
     var erro = $('.msg.alert');
     var nomePet = $('#nomePet');
     var dataIni = $('#dataIni');
@@ -167,7 +167,7 @@ $('#dataHospedagem').submit(function(){
     var portePq = document.getElementById('portePq');
     var porteGr = document.getElementById('porteGr');
     var porte = $('#porte');
-    
+
     erro.addClass('d-none');
     $('.is-invalid').removeClass('is-invalid');
     $('.text-danger').removeClass('text-danger');

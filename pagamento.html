@@ -150,6 +150,14 @@
                         </div>
                     </div>
                 </div>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <h2>AVISO!</h2>
+                        <p>A reserva só será efetivada mediante o pagamento de 50% do valor.</p>
+                        <p>Caso haja desistência, o valor pago não será reembolsado. Grata pela compreensão.</p>
+                        <button class="popupMsg btn mb-2" onclick="closePopup()">Estou ciente</button>
+                    </div>
+                </div>  
                 
         </div>
         
@@ -174,3 +182,15 @@
     </div>
 </body>
 </html>
+<script>
+    function openPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    window.location.href = 'https://leoespindula.github.io/HospedagemPet/pagamento.html';
+}
+</script>
