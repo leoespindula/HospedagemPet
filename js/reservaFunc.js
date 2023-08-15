@@ -100,6 +100,7 @@ function calcularValor(){
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
+    document.getElementById('valorFinal').value = 'R$' + diaria +',00';
     return diaria
 }
 
