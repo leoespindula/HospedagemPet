@@ -200,7 +200,7 @@ var valor = params.get("valor")/2;
 valor = parseFloat(valor).toFixed(2).replace('.',',');
 
 
-if(valor!= 0 && valor != null){
+if(valor!= 0 && valor != null && valor!= '0,00'){
     document.getElementById('valorParagrafo').hidden=false;
     document.getElementById('valorParagrafo').textContent += valor + ".";
     // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
