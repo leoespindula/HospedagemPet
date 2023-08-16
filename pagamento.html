@@ -198,7 +198,7 @@ var url = window.location.href;
 var params = new URLSearchParams(new URL(url).search);
 var valor = params.get("valor");
 valor = valor/2
-valor = parseFloat(valor).toFixed(2);
+valor = parseFloat(valor).toFixed(2).replace('.',',');
 
 
 if(valor!= 0 && valor != null){
