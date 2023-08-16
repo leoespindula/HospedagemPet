@@ -197,10 +197,13 @@ function closePopup() {
 var url = window.location.href;
 var params = new URLSearchParams(new URL(url).search);
 var valor = params.get("valor");
+valor = valor/2
+valor = parseFloat(valor).toFixed(2);
+
 
 if(valor!= 0 && valor != null){
     document.getElementById('valorParagrafo').hidden=false;
-    document.getElementById('valorParagrafo').textContent += valor/2 + ".";
+    document.getElementById('valorParagrafo').textContent += valor + ".";
     // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
 
 }
