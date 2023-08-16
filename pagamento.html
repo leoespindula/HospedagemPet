@@ -153,8 +153,8 @@
                 <div id="popup" class="popup">
                     <div class="popup-content">
                         <h2>AVISO!</h2>
-                        <p id="valorAPagar">A reserva só será efetivada mediante a entrada de 50% do orçamento inicial.</p>
-                        <p>Caso haja desistência o valor pago não será reembolsado. Gratos pela compreensão!</p>
+                        <p id="valorAPagar">Em razão  da alta procura a reserva só será efetivada mediante a entrada de 50% do orçamento inicial.</p>
+                        <p>Caso haja desistência o valor pago não será reembolsado, gratos pela compreensão!</p>
                         <p id="valorParagrafo" hidden>Entrada R$ </p>
                         <button class="popupMsg btn mb-2" onclick="closePopup()">Estou ciente</button>
                     </div>
@@ -200,7 +200,7 @@ var valor = params.get("valor");
 
 if(valor!= 0 && valor != null){
     document.getElementById('valorParagrafo').hidden=false;
-    document.getElementById('valorParagrafo').textContent += valor/2 + ",00.";
+    document.getElementById('valorParagrafo').textContent += valor/2 + ".";
     // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
 
 }
