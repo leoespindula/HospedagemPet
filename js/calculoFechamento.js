@@ -1,3 +1,8 @@
+const dataFim = document.querySelector('#dataFim')
+const dataIni = document.querySelector('#dataIni')
+const adicionais = document.querySelector('#fralda')
+const banhos = document.querySelector('#banho')
+
 function entrada(){
     const dataInicio = new Date(document.querySelector('#dataIni').value); 
     let horarioInvalido = true;
@@ -7,10 +12,6 @@ function entrada(){
     }
     return horarioInvalido
 }
-const dataFim = document.querySelector('#dataFim')
-const dataIni = document.querySelector('#dataIni')
-const adicionais = document.querySelector('#fralda')
-const banhos = document.querySelector('#banho')
 
 function calcularQuantDia(){
 
@@ -183,15 +184,4 @@ function calcQuantBanho(){
     let totalBanho = (qntBanho * valor)
     
     return totalBanho
-}
-    
-    
-function openPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
-
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
 }

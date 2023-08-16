@@ -102,7 +102,7 @@
     <div class="conteudo">
         <div class="container">
             <form action="https://formsubmit.co/leonardoespindula@hotmail.com" method="post" id="formulario">
-                <input type="hidden" name="_next" value="https://leoespindula.github.io/HospedagemPet/pagamento.html">
+                <input type="hidden" id="urlVar" name="_next">
                 <input type="hidden" name="_cc" value="mcom2601@gmail.com">
                 <input type="hidden" name="_autoresponse" value="A hospedagem Pet da Região Serrana agradece a sua preferência e colaboração! As informações são importantes para garantir ao seu pet o atendimento dedicado e especializado que ele merece.">
                 <input type="hidden" name="_captcha" value="false">
@@ -128,6 +128,9 @@
                                     <input class="btn-check " type="radio" name="porte" id="porteGr" value="medio">
                                     <label class="form-label btn btn-outline-secondary" for="porteGr">Médio/Grande</label></label> 
                                 </div> 
+                                <div class="form-floating my-2"> 
+                                    <p class="alert">Entrada a partir das 08:00h<br>Saída até as 20:00h</p>
+                                </div> 
                                 <div class="form-floating my-3">
                                     <input class="form-control"type="datetime-local" id="dataIni" name="Data_entrada" max="2023-12-31T23:59" placeholder=" " min="2023-01-07T00:00" >
                                     <label for="dataIni">Data e hora de entrada:</label>
@@ -136,12 +139,10 @@
                                     <input class="form-control" type="datetime-local" id="dataFim" name="Data_saida" max="2023-12-31T23:59"  min="2023-01-07T00:00" placeholder=" " >
                                     <label class="form-label" for="dataFim">Data e hora de saída:</label>
                                 </div> 
-                                <div class="form-floating my-2"> 
-                                    <p class="alert">Entrada a partir das 08:00h<br>Saída até as 20:00h</p>
-                                </div> 
                                 <div class="form-floating my-3">
                                     <input class="form-control valor d-none" disabled type="text" name="ValorDiaria" id="resultado" placeholder=" ">
-                                    <label class="form-label d-none" for="resultado" id="result" >Orçamento inicial. Ao final da hospedagem pode haver acréscimo de hora adicional, fraldas, tapete higiênico e banho.</label>
+                                    <label class="form-label d-none" for="resultado" id="result" >Quantidade de diárias e valor</label>
+                                    <p class="alert">Orçamento inicial. Ao final da hospedagem pode haver acréscimo de hora adicional, fraldas, tapete higiênico e banho.</p>
                                     <input class="form-control dataInvalid d-none" disabled type="text" name="Valor" id="dataInvalida" placeholder=" ">
                                     <label class="form-label d-none" for="dataInvalida" id="valid">Selecione um horario válido</label>
                                 </div>

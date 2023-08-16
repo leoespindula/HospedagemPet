@@ -101,6 +101,7 @@ function calcularValor(){
         }
     }
     document.getElementById('valorFinal').value = 'R$' + diaria +',00';
+    document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
     return diaria
 }
 
