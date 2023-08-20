@@ -184,10 +184,10 @@
 </body>
 </html>
 <script>
-//     function openPopup() {
-//     var popup = document.getElementById("popup");
-//     popup.style.display = "block";
-// }
+    function openPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
 
 function closePopup() {
     var popup = document.getElementById("popup");
@@ -201,6 +201,7 @@ valor = parseFloat(valor).toFixed(2).replace('.',',');
 
 
 if(valor!= 0 && valor != null && valor!= '0,00'){
+    openPopup();
     document.getElementById('valorParagrafo').hidden=false;
     document.getElementById('valorParagrafo').textContent += valor + ".";
     // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
