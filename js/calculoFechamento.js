@@ -84,7 +84,7 @@ function calcularValor(){
     }
     else if (calcularQuantDia() > 3){
         if(portePq.checked == true){
-            diaria = 70;
+            diaria = 60;
         diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
