@@ -7,9 +7,10 @@ function entrada(){
     const dataInicio = new Date(document.querySelector('#dataIni').value); 
     let horarioInvalido = true;
     var hora = dataInicio.getHours()
-    if (hora > 7 && hora < 20){
-        horarioInvalido = false;
-    }
+    // if (hora > 7 && hora < 20){
+    //     horarioInvalido = false;
+    // }
+    horarioInvalido = false;
     return horarioInvalido
 }
 
@@ -83,7 +84,7 @@ function calcularValor(){
     }
     else if (calcularQuantDia() > 3){
         if(portePq.checked == true){
-            diaria = 60;
+            diaria = 70;
         diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
@@ -126,7 +127,7 @@ function atualizarCampos() {
     }
     else if(calcularQuantDia() < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
         document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
         document.getElementById('resultado').classList.remove('d-none');
@@ -140,7 +141,7 @@ function atualizarCampos() {
     }
     else{
         document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/2)+ ',  R$'+calcQuantFralda()+',00';
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
         document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
         document.getElementById('resultado').classList.remove('d-none');
