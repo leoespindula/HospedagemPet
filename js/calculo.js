@@ -44,6 +44,7 @@ function calcularValor(){
     var hora = dataInicio.getHours()
     let diaria = 0;
     let vlrhr = 3
+    var portePq = document.getElementById('pequeno');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
@@ -61,17 +62,39 @@ function calcularValor(){
     }
 
     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
-        diaria = 50
+        if(portePq.checked == true){
+            diaria = 50;
+        }
+        else{
+            diaria = 70;
+        } 
     }
     else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
-        diaria = 70
+        if(portePq.checked == true){
+            diaria = 70;
+        }
+        else{
+            diaria = 90;
+        } 
     }
     else if (calcularQuantDia() > 3){
-        diaria = 60;
+        if(portePq.checked == true){
+            diaria = 60;
         diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 80;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        } 
     }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
-        diaria = 70;
-        diaria = diaria * calcularQuantDia() + vlrhrs
+        if(portePq.checked == true){
+            diaria = 70;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 90;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
     }
     return diaria
 }
