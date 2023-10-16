@@ -162,3 +162,39 @@ dataFim.addEventListener('change', () => {
     //     }
     //     });
 
+    // function calcularValor(){
+    //     const dataInicio = new Date(document.querySelector('#dataIni').value); 
+    //     var hora = dataInicio.getHours()
+    //     let diaria = 0;
+    //     let vlrhr = 3
+    //     if (hora > 5 && hora < 18){
+    //         vlrhr = 5
+    //     }
+    //     let vlrhrs = 0
+        
+    //     if(calcHorasExtras() > 12){
+    //         if (calcularQuantDia() > 3){
+    //             vlrhrs = 60;
+    //         }else{
+    //             vlrhrs = 70
+    //         }       
+    //     }
+    //     else{
+    //         vlrhrs = vlrhr * calcHorasExtras()
+    //     }
+    
+    //     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
+    //         diaria = 50
+    //     }
+    //     else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
+    //         diaria = 70
+    //     }
+    //     else if (calcularQuantDia() > 3){
+    //         diaria = 60;
+    //         diaria = diaria * calcularQuantDia() + vlrhrs
+    //     }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
+    //         diaria = 70;
+    //         diaria = diaria * calcularQuantDia() + vlrhrs
+    //     }
+    //     return diaria
+    // }
