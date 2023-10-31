@@ -137,7 +137,7 @@ function atualizarCampos() {
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
         // document.getElementById('resultadoBanho').classList.remove('d-none');
-        document.getElementById('resultB').classList.remove('d-none');
+        // document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
@@ -151,7 +151,7 @@ function atualizarCampos() {
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
         // document.getElementById('resultadoBanho').classList.remove('d-none');
-        document.getElementById('resultB').classList.remove('d-none');
+        // document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
