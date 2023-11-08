@@ -1,17 +1,16 @@
 const dataFim = document.querySelector('#dataFim')
 const dataIni = document.querySelector('#dataIni')
 const adicionais = document.querySelector('#fralda')
-// const banhos = document.querySelector('#banho')
 
 function entrada(){
     const dataInicio = new Date(document.querySelector('#dataIni').value); 
-    let horarioInvalido = true;
+    let horarioValido = true;
     var hora = dataInicio.getHours()
     // if (hora > 7 && hora < 20){
-    //     horarioInvalido = false;
+    //     horarioValido = false;
     // }
-    horarioInvalido = false;
-    return horarioInvalido
+    horarioValido = false;
+    return horarioValido
 }
 
 function calcularQuantDia(){
@@ -56,11 +55,6 @@ function calcularValor(){
     let vlrhrs = 0
     
     if(calcHorasExtras() > 12){
-        // if (calcularQuantDia() > 3){
-        //     vlrhrs = 60;
-        // }else{
-        //     vlrhrs = 70
-        // } 
         vlrhrs = 70      
     }
     else{
@@ -80,26 +74,16 @@ function calcularValor(){
             diaria = 70;
         }
         else{
-            diaria = 80;
+            diaria = 90;
         } 
     }
-    // else if (calcularQuantDia() > 3){
-    //     if(portePq.checked == true){
-    //         diaria = 60;
-    //     diaria = diaria * calcularQuantDia() + vlrhrs
-    //     }
-    //     else{
-    //         diaria = 80;
-    //         diaria = diaria * calcularQuantDia() + vlrhrs
-    //     } 
-    // }
     else if(calcularQuantDia() >=1){
         if(portePq.checked == true){
             diaria = 70;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
-            diaria = 80;
+            diaria = 90;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
@@ -130,28 +114,22 @@ function atualizarCampos() {
     else if(calcularQuantDia() < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
-        // document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda()) +',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
-        // document.getElementById('resultadoBanho').classList.remove('d-none');
-        // document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
     else{
         document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
-        // document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() )+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
-        // document.getElementById('resultadoBanho').classList.remove('d-none');
-        // document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
@@ -169,17 +147,12 @@ adicionais.addEventListener('change', () => {
     atualizarCampos();
 });
 
-// banhos.addEventListener('change', () => {
-//     atualizarCampos();
-// });
-
 function goToWhatsapp() {
     var name = document.getElementById("nomePet").value;
     var dateIni = document.getElementById("dataIni").value;
     var dateFim = document.getElementById("dataFim").value;
     var valorD = document.getElementById("resultado").value;
     var valorF = document.getElementById("resultadoFralda").value;
-    // var valorB = document.getElementById("resultadoBanho").value;
     var valorT = document.getElementById("total").value;
 
     var url = "https://wa.me/?text="
@@ -188,7 +161,6 @@ function goToWhatsapp() {
     + "Data saída: " + dateFim + "%0a"
     + "Diárias e valor: " + valorD + "%0a"
     + "Fralda/Tapete higiênico: " + valorF + "%0a"
-    // + "Banho: " + valorB + "%0a"
     + valorT + "%0a";
 
     window.open(url, '_blank').focus();
@@ -202,12 +174,3 @@ function calcQuantFralda(){
     
     return totalFraldas
 }
-
-// function calcQuantBanho(){
-//     const qntBanho = document.getElementById('banho').value;
-//     const valor = 50
-
-//     let totalBanho = (qntBanho * valor)
-    
-//     return totalBanho
-// }
