@@ -53,11 +53,7 @@ function calcularValor(){
     let vlrhrs = 0
     
     if(calcHorasExtras() > 12){
-        if (calcularQuantDia() > 3){
-            vlrhrs = 60;
-        }else{
-            vlrhrs = 70
-        }       
+            vlrhrs = 70   
     }
     else{
         vlrhrs = vlrhr * calcHorasExtras()
@@ -76,7 +72,7 @@ function calcularValor(){
             diaria = 70;
         }
         else{
-            diaria = 90;
+            diaria = 80;
         } 
     }
     else if (calcularQuantDia() > 3){
@@ -96,7 +92,7 @@ function calcularValor(){
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
-            diaria = 90;
+            diaria = 80;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
