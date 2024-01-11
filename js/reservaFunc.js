@@ -219,3 +219,24 @@ $('#formulario').submit(function(){
     }
     
 });
+
+var dateEntrada = document.getElementById('dataIni');
+        var dateSaida = document.getElementById('dataFim');
+        var FeriadoOn = new Date('2024-01-13');
+        var FeriadoOff = new Date('2024-01-22');
+
+        dateEntrada.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+            this.value = '';
+            alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+        }
+        });
+
+        dateSaida.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+            this.value = '';
+            alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+        }
+        });
