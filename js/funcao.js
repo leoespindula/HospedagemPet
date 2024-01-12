@@ -1,12 +1,6 @@
-$('#formulario').submit(function(){
+$('#formulario2').submit(function(){
     var nomeTutor = $('#nomeTutor');
-    var erro = $('.msg.alert');
-    // var result = $('.result.alert');
-    // var calcular = $('#calcular')
-    var campo = $('#campo-erro');
-    // var resultado = $('#campo-resultado');
     var telefone = $('#tell');
-    var nomePet = $('#nomePet');
     var especie = $('#especie');
     var raca = $('#raca');
     var macho = document.getElementById("macho");
@@ -37,16 +31,7 @@ $('#formulario').submit(function(){
     var sSociavel = document.getElementById("sSociavel");
     var nSociavel = document.getElementById("nSociavel");
     var sociavel = $('#sociavel');
-    var dataIni = $('#dataIni');
-    var dataFim = $('#dataFim');
-    var resultado = $('#resultado');
 
-    
-
-    erro.addClass('d-none');
-    $('.is-invalid').removeClass('is-invalid');
-    $('.text-danger').removeClass('text-danger');
-    $('.radio').removeClass('form-control')
 
 
     if(nomeTutor.val() == ''){
@@ -62,30 +47,6 @@ $('#formulario').submit(function(){
         campo.html('Telefone');
         telefone.focus();
         telefone.addClass('is-invalid');
-        return false;
-    }
-
-    else if(dataIni.val() == ''){
-        erro.removeClass('d-none');
-        campo.html('Data de Entrada');
-        dataIni.focus();
-        dataIni.addClass('is-invalid');
-        return false;
-    }
-
-    else if(dataFim.val() == ''){
-        erro.removeClass('d-none');
-        campo.html('Data de Saída');
-        dataFim.focus();
-        dataFim.addClass('is-invalid');
-        return false;
-    }
-
-    else if(nomePet.val() == ''){
-        erro.removeClass('d-none');
-        campo.html('Nome do Pet');
-        nomePet.focus();
-        nomePet.addClass('is-invalid');
         return false;
     }
 
@@ -195,28 +156,9 @@ $('#formulario').submit(function(){
         sociavel.addClass('is-invalid form-control');
         return false;
     }
-    // else if(resultado.val() == ''){
-    //     result.removeClass('d-none');
-    //     resultado.focus();
-    //     resultado.addClass('is-invalid');
-    //     calcular.removeClass('btn-success');
-    //     calcular.addClass('btn-danger')
-    //     calcular.addClass('is-invalid');
-    //     return false;
-    // }
     
     else{
         return true;
     }
     
 });
-
-function openPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
-
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-}

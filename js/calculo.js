@@ -1,5 +1,5 @@
 function entrada(){
-    const dataInicio = new Date(document.querySelector('#dataIni').value); 
+    const dataInicio = new Date(document.querySelector('#dataIni2').value); 
     let horarioInvalido = true;
     var hora = dataInicio.getHours()
     if (hora > 7 && hora < 20){
@@ -7,15 +7,15 @@ function entrada(){
     }
     return horarioInvalido
 }
-const dataFim = document.querySelector('#dataFim')
-const dataIni = document.querySelector('#dataIni')
+const dataFim2 = document.querySelector('#dataFim2')
+const dataIni2 = document.querySelector('#dataIni2')
 
 function calcularQuantDia(){
 
-    const dataInicio = new Date(document.querySelector('#dataIni').value);
-    const dataFim = new Date(document.querySelector('#dataFim').value);
-    let start = dataInicio
-    let end = dataFim
+    const dataInicio2 = new Date(document.querySelector('#dataIni2').value);
+    const dataFim2 = new Date(document.querySelector('#dataFim2').value);
+    let start = dataInicio2
+    let end = dataFim2
     start = new Date(start)
     end = new Date(end)
 
@@ -25,10 +25,10 @@ function calcularQuantDia(){
     return diffInDays     
 }
 function calcHorasExtras(){
-    const dataInicio = new Date(document.querySelector('#dataIni').value);
-    const dataFim = new Date(document.getElementById('dataFim').value);
-    let start = dataInicio
-    let end = dataFim
+    const dataInicio2 = new Date(document.querySelector('#dataIni2').value);
+    const dataFim2 = new Date(document.getElementById('dataFim2').value);
+    let start = dataInicio2
+    let end = dataFim2
     start = new Date(start)
     end = new Date(end)
 
@@ -40,23 +40,19 @@ function calcHorasExtras(){
     return horasExtras
 }
 function calcularValor(){
-    const dataInicio = new Date(document.querySelector('#dataIni').value); 
-    var hora = dataInicio.getHours()
+    const dataInicio2 = new Date(document.querySelector('#dataIni2').value); 
+    var hora = dataInicio2.getHours()
     let diaria = 0;
     let vlrhr = 3
-    var portePq = document.getElementById('pequeno');
+    var portePq = document.getElementById('portePq2');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
+   
     let vlrhrs = 0
     
     if(calcHorasExtras() > 12){
-        // if (calcularQuantDia() > 3){
-        //     vlrhrs = 60;
-        // }else{
-        //     vlrhrs = 70
-        // }  
-        vlrhrs = 70     
+            vlrhrs = 70   
     }
     else{
         vlrhrs = vlrhr * calcHorasExtras()
@@ -75,61 +71,65 @@ function calcularValor(){
             diaria = 70;
         }
         else{
-            diaria = 90;
+            diaria = 80;
         } 
     }
-    // else if (calcularQuantDia() > 3){
-    //     if(portePq.checked == true){
-    //         diaria = 60;
-    //     diaria = diaria * calcularQuantDia() + vlrhrs
-    //     }
-    //     else{
-    //         diaria = 80;
-    //         diaria = diaria * calcularQuantDia() + vlrhrs
-    //     } 
-    // }
-    else if(calcularQuantDia() >=1){
+    else if (calcularQuantDia() > 3){
+        
+        if(portePq.checked == true){
+            diaria = 60;
+        diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 80;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        } 
+    }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
+        
         if(portePq.checked == true){
             diaria = 70;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
-            diaria = 90;
+            diaria = 80;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
+    document.getElementById('valorFinal2').value = 'R$' + diaria +',00';
+    document.getElementById('urlVar2').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
     return diaria
 }
 
+
 function atualizarCampos() {
-    document.getElementById('dataInvalida').classList.add('d-none');
-    document.getElementById('valid').classList.add('d-none');
-    document.getElementById('resultado').classList.add('d-none');
-    document.getElementById('result').classList.add('d-none');
+    document.getElementById('dataInvalida2').classList.add('d-none');
+    document.getElementById('valid2').classList.add('d-none');
+    document.getElementById('resultado2').classList.add('d-none');
+    document.getElementById('result2').classList.add('d-none');
     $('.is-invalid').removeClass('is-invalid');
-    document.getElementById('submit').disabled = false;
-    document.getElementById('submit').classList.remove('btn-danger')
-    document.getElementById('submit').classList.add('btn-primary')
+    document.getElementById('submit2').disabled = false;
+    document.getElementById('submit2').classList.remove('btn-danger')
+    document.getElementById('submit2').classList.add('btn-primary')
     
     if(entrada()){
-        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
-        document.getElementById('dataInvalida').classList.add('is-invalid');
-        document.getElementById('dataIni').classList.add('is-invalid');
-        document.getElementById('dataInvalida').classList.remove('d-none');
-        document.getElementById('valid').classList.remove('d-none');
+        document.getElementById('dataInvalida2').value = 'Entrada permitida das 08:00h as 20:00h'
+        document.getElementById('dataInvalida2').classList.add('is-invalid');
+        document.getElementById('dataIni2').classList.add('is-invalid');
+        document.getElementById('dataInvalida2').classList.remove('d-none');
+        document.getElementById('valid2').classList.remove('d-none');
         document.getElementById('submit').disabled = true;
         document.getElementById('submit').classList.add('btn-danger')
         document.getElementById('submit').classList.remove('btn-primary')
     }
     else if(calcularQuantDia() < 1){
-        document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00'
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
+        document.getElementById('resultado2').value = 'Valor fixo, R$'+calcularValor ()+',00';
+        document.getElementById('resultado2').classList.remove('d-none');
+        document.getElementById('result2').classList.remove('d-none');
     }
     else{
-        document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
-        document.getElementById('resultado').classList.remove('d-none');
-        document.getElementById('result').classList.remove('d-none');
+        document.getElementById('resultado2').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
+        document.getElementById('resultado2').classList.remove('d-none');
+        document.getElementById('result2').classList.remove('d-none');
     }
 }
 
@@ -140,63 +140,25 @@ dataIni.addEventListener('change', () => {
 dataFim.addEventListener('change', () => {
     atualizarCampos();
 });
-    
-    // Datas indisponiveis temporário
 
-    var dateEntrada = document.getElementById('dataIni');
-    var dateSaida = document.getElementById('dataFim');
-    var FeriadoOn = new Date('2024-01-13');
-    var FeriadoOff = new Date('2024-01-22');
 
-    dateEntrada.addEventListener('input', function() {
-    var selectedDate = new Date(this.value);
-    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-        this.value = '';
-        alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
-    }
-    });
+var dateEntrada = document.getElementById('dataIni2');
+        var dateSaida = document.getElementById('dataFim2');
+        var FeriadoOn = new Date('2024-01-13');
+        var FeriadoOff = new Date('2024-01-22');
 
-    dateSaida.addEventListener('input', function() {
-    var selectedDate = new Date(this.value);
-    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-        this.value = '';
-        alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
-    }
-    });
+        dateEntrada.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+            this.value = '';
+            alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+        }
+        });
 
-    // function calcularValor(){
-    //     const dataInicio = new Date(document.querySelector('#dataIni').value); 
-    //     var hora = dataInicio.getHours()
-    //     let diaria = 0;
-    //     let vlrhr = 3
-    //     if (hora > 5 && hora < 18){
-    //         vlrhr = 5
-    //     }
-    //     let vlrhrs = 0
-        
-    //     if(calcHorasExtras() > 12){
-    //         if (calcularQuantDia() > 3){
-    //             vlrhrs = 60;
-    //         }else{
-    //             vlrhrs = 70
-    //         }       
-    //     }
-    //     else{
-    //         vlrhrs = vlrhr * calcHorasExtras()
-    //     }
-    
-    //     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
-    //         diaria = 50
-    //     }
-    //     else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
-    //         diaria = 70
-    //     }
-    //     else if (calcularQuantDia() > 3){
-    //         diaria = 60;
-    //         diaria = diaria * calcularQuantDia() + vlrhrs
-    //     }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
-    //         diaria = 70;
-    //         diaria = diaria * calcularQuantDia() + vlrhrs
-    //     }
-    //     return diaria
-    // }
+        dateSaida.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+            this.value = '';
+            alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+        }
+        });
