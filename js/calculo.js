@@ -142,10 +142,10 @@ dataFim.addEventListener('change', () => {
 });
 
 
-var dateEntrada = document.getElementById('dataIni2');
+        var dateEntrada = document.getElementById('dataIni2');
         var dateSaida = document.getElementById('dataFim2');
-        var FeriadoOn = new Date('2024-01-13');
-        var FeriadoOff = new Date('2024-01-22');
+        var FeriadoOn = new Date('2024-03-31');
+        var FeriadoOff = new Date('2024-03-31');
 
         dateEntrada.addEventListener('input', function() {
         var selectedDate = new Date(this.value);

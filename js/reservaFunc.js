@@ -363,14 +363,16 @@ $('#formulario').submit(function(){
 
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var FeriadoOn = new Date('2024-01-13');
-var FeriadoOff = new Date('2024-01-22');
+var FeriadoOn = new Date('2024-04-01');
+var FeriadoOff = new Date('2024-04-02');
 
 dateEntrada.addEventListener('input', function() {
 var selectedDate = new Date(this.value);
+// alert(FeriadoOn)
+// alert(selectedDate)
 if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
     this.value = '';
-    alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+    alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
 }
 });
 
@@ -378,6 +380,6 @@ dateSaida.addEventListener('input', function() {
 var selectedDate = new Date(this.value);
 if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
     this.value = '';
-    alert('Estamos de recesso do dia 13/01 a 22/01. Gratos pela compreensão!');
+    alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
 }
 });
