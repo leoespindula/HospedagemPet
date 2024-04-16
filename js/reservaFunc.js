@@ -2,9 +2,44 @@ function entrada(){
     const dataInicio = new Date(document.querySelector('#dataIni').value); 
     let horarioInvalido = true;
     var hora = dataInicio.getHours()
-    if (hora > 7 && hora < 20){
+    
+    if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
+            
+        
+        if(hora > 8 && hora < 18){
+            horarioInvalido = false;
+        }else{
+            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+        }
+    }
+    else if (hora > 7 && hora < 20){
         horarioInvalido = false;
     }
+    
+    return horarioInvalido
+}
+function saida(){
+    const dataFim = new Date(document.querySelector('#dataFim').value); 
+    const dataInicio = new Date(document.querySelector('#dataIni').value); 
+    let horarioInvalido = true;
+    var hora = dataFim.getHours()
+    
+    if(dataFim.toString().includes('Sun') || dataFim.toString().includes('Sat')){
+            
+        
+        if(hora > 8 && hora < 18){
+            horarioInvalido = false;
+        }else{
+            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+        }
+    }
+    else if(dataFim <= dataInicio){
+        horarioInvalido = true
+    }
+    else if (hora > 7 && hora < 20){
+        horarioInvalido = false;
+    }
+    
     return horarioInvalido
 }
 const dataFim = document.querySelector('#dataFim')
@@ -114,7 +149,13 @@ function atualizarCampos() {
     document.getElementById('submit').classList.add('btn-primary')
     
     if(entrada()){
-        document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
+        const dataInicio = new Date(document.querySelector('#dataIni').value); 
+        if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
+            document.getElementById('dataInvalida').value = 'Entrada permitida das 09:00h as 18:00h'
+        }else{
+            document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
+        }
+        
         document.getElementById('dataInvalida').classList.add('is-invalid');
         document.getElementById('dataIni').classList.add('is-invalid');
         document.getElementById('dataInvalida').classList.remove('d-none');
@@ -122,7 +163,57 @@ function atualizarCampos() {
         document.getElementById('submit').disabled = true;
         document.getElementById('submit').classList.add('btn-danger')
         document.getElementById('submit').classList.remove('btn-primary')
+    }  
+    else if(calcularQuantDia() < 1){
+        document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
     }
+    else{
+        document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
+        document.getElementById('resultado').classList.remove('d-none');
+        document.getElementById('result').classList.remove('d-none');
+    }
+}
+
+function atualizarCamposFim() {
+    document.getElementById('dataInvalida').classList.add('d-none');
+    document.getElementById('valid').classList.add('d-none');
+    document.getElementById('resultado').classList.add('d-none');
+    document.getElementById('result').classList.add('d-none');
+    $('.is-invalid').removeClass('is-invalid');
+    document.getElementById('submit').disabled = false;
+    document.getElementById('submit').classList.remove('btn-danger')
+    document.getElementById('submit').classList.add('btn-primary')
+    
+    if(saida()){
+        const dataFim = new Date(document.querySelector('#dataFim').value); 
+        const dataInicio = new Date(document.querySelector('#dataIni').value); 
+        if(dataFim.toString().includes('Sun') || dataFim.toString().includes('Sat')){
+            document.getElementById('dataInvalida').value = 'Entrada permitida das 09:00h as 18:00h'
+        }
+        else if(dataFim <= dataInicio){
+            document.getElementById('dataInvalida').value = 'A saída deve ser maior que a entrada'
+            document.getElementById('dataInvalida').classList.add('is-invalid');
+            document.getElementById('dataFim').classList.add('is-invalid');
+            document.getElementById('dataInvalida').classList.remove('d-none');
+            document.getElementById('valid').classList.remove('d-none');
+            document.getElementById('submit').disabled = true;
+            document.getElementById('submit').classList.add('btn-danger')
+            document.getElementById('submit').classList.remove('btn-primary')
+        }
+        else{
+            document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
+        }
+        
+        document.getElementById('dataInvalida').classList.add('is-invalid');
+        document.getElementById('dataFim').classList.add('is-invalid');
+        document.getElementById('dataInvalida').classList.remove('d-none');
+        document.getElementById('valid').classList.remove('d-none');
+        document.getElementById('submit').disabled = true;
+        document.getElementById('submit').classList.add('btn-danger')
+        document.getElementById('submit').classList.remove('btn-primary')
+    }  
     else if(calcularQuantDia() < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
         document.getElementById('resultado').classList.remove('d-none');
@@ -141,6 +232,7 @@ dataIni.addEventListener('change', () => {
 
 dataFim.addEventListener('change', () => {
     atualizarCampos();
+    atualizarCamposFim();
 });
 
 
@@ -368,19 +460,23 @@ var FeriadoOn = new Date('2024-04-01');
 var FeriadoOff = new Date('2024-04-02');
 
 dateEntrada.addEventListener('input', function() {
-var selectedDate = new Date(this.value);
-// alert(FeriadoOn)
-// alert(selectedDate)
-if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-    this.value = '';
-    alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
-}
-});
+    var selectedDate = new Date(this.value);
+    // alert(selectedDate)
 
-dateSaida.addEventListener('input', function() {
-var selectedDate = new Date(this.value);
-if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
-    this.value = '';
-    alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
-}
+    // if(selectedDate.toString().includes('Sun') || selectedDate.toString().includes('Sat')){
+    //     alert('Horário de entrada a partir das 09:00 e saída até as 18:00  aos Sábados e Domingos')
+    // }
+
+    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+        this.value = '';
+        alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
+    }
+    });
+
+    dateSaida.addEventListener('input', function() {
+    var selectedDate = new Date(this.value);
+    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+        this.value = '';
+        alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
+    }
 });
