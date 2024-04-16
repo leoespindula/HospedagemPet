@@ -74,17 +74,18 @@ function calcularValor(){
             diaria = 80;
         } 
     }
-    else if (calcularQuantDia() > 3){
+    // else if (calcularQuantDia() > 3){
         
-        if(portePq.checked == true){
-            diaria = 60;
-        diaria = diaria * calcularQuantDia() + vlrhrs
-        }
-        else{
-            diaria = 80;
-            diaria = diaria * calcularQuantDia() + vlrhrs
-        } 
-    }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
+    //     if(portePq.checked == true){
+    //         diaria = 60;
+    //     diaria = diaria * calcularQuantDia() + vlrhrs
+    //     }
+    //     else{
+    //         diaria = 80;
+    //         diaria = diaria * calcularQuantDia() + vlrhrs
+    //     } 
+    // }
+    else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
         
         if(portePq.checked == true){
             diaria = 70;
