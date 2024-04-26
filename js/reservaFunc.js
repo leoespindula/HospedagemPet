@@ -454,22 +454,19 @@ $('#formulario').submit(function(){
     
 });
 
+// Função de desativar datas disponíveis
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var FeriadoOn = new Date('2024-04-01');
-var FeriadoOff = new Date('2024-04-02');
+var FeriadoOn = new Date('2024-05-12T00:00:00.000');
+var FeriadoOff = new Date('2024-05-12T23:59:59.999');
 
 dateEntrada.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
     // alert(selectedDate)
-
-    // if(selectedDate.toString().includes('Sun') || selectedDate.toString().includes('Sat')){
-    //     alert('Horário de entrada a partir das 09:00 e saída até as 18:00  aos Sábados e Domingos')
-    // }
-
+    console.log(selectedDate, FeriadoOn, FeriadoOff)
     if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
         this.value = '';
-        alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
+        alert('Não funcionaremos dia 12/05 (Dia da mães). Gratos pela compreensão!');
     }
     });
 
@@ -477,6 +474,6 @@ dateEntrada.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
     if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
         this.value = '';
-        alert('Estamos de recesso no dia 31/03 (Páscoa). Gratos pela compreensão!');
+        alert('Não funcionaremos dia 12/05 (Dia da mães). Gratos pela compreensão!');
     }
 });
