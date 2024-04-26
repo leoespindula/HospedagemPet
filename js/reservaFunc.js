@@ -457,23 +457,27 @@ $('#formulario').submit(function(){
 // Função de desativar datas disponíveis
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var FeriadoOn = new Date('2024-05-12T00:00:00.000');
-var FeriadoOff = new Date('2024-05-12T23:59:59.999');
+var Feriado_1_inicio = new Date('2024-05-12T00:00:00.000');
+var Feriado_1_fim = new Date('2024-05-12T23:59:59.999');
+var Feriado_2_inicio = new Date('2024-05-01T00:00:00.000');
+var Feriado_2_fim = new Date('2024-05-01T23:59:59.999');
 
 dateEntrada.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
     // alert(selectedDate)
-    console.log(selectedDate, FeriadoOn, FeriadoOff)
-    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+    // console.log(selectedDate, Feriado_1_inicio, Feriado_1_fim)
+    if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
+        (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
-        alert('Não funcionaremos dia 12/05 (Dia da mães). Gratos pela compreensão!');
+        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
     }
     });
 
     dateSaida.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
-    if (selectedDate >= FeriadoOn && selectedDate <= FeriadoOff) {
+    if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
+        (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
-        alert('Não funcionaremos dia 12/05 (Dia da mães). Gratos pela compreensão!');
+        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
     }
 });
