@@ -457,7 +457,7 @@ $('#formulario').submit(function(){
 // Função de desativar datas disponíveis
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var Feriado_1_inicio = new Date('2024-05-12T00:00:00.000');
+var Feriado_1_inicio = new Date('2024-05-11T00:00:00.000');
 var Feriado_1_fim = new Date('2024-05-12T23:59:59.999');
 var Feriado_2_inicio = new Date('2024-05-01T00:00:00.000');
 var Feriado_2_fim = new Date('2024-05-01T23:59:59.999');
