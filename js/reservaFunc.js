@@ -466,18 +466,31 @@ dateEntrada.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
     // alert(selectedDate)
     // console.log(selectedDate, Feriado_1_inicio, Feriado_1_fim)
+    var dataIniValue = new Date(dateEntrada.value);
+    var dataFimValue = new Date(dateSaida.value);
     if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
+        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
+        
+    }
+    if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
         alert('Não funcionaremos neste dia. Gratos pela compreensão!');
     }
     });
 
     dateSaida.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
+    var dataIniValue = new Date(dateEntrada.value);
+    var dataFimValue = new Date(dateSaida.value);
     if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
+      
         alert('Não funcionaremos neste dia. Gratos pela compreensão!');
+        
+    }
+    if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
+        alert('Não funcionaremos nos dias 11 e 12 de maio. Gratos pela compreensão!');
     }
 });
