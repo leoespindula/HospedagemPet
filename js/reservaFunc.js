@@ -5,11 +5,11 @@ function entrada(){
     
     if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
             
-        
         if(hora > 8 && hora < 18){
             horarioInvalido = false;
         }else{
             alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            document.querySelector('#dataIni').value = '';
         }
     }
     else if (hora > 7 && hora < 20){
@@ -31,6 +31,7 @@ function saida(){
             horarioInvalido = false;
         }else{
             alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            document.querySelector('#dataFim').value = '';
         }
     }
     else if(dataFim <= dataInicio){
@@ -152,6 +153,7 @@ function atualizarCampos() {
         const dataInicio = new Date(document.querySelector('#dataIni').value); 
         if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
             document.getElementById('dataInvalida').value = 'Entrada permitida das 09:00h as 18:00h'
+            
         }else{
             document.getElementById('dataInvalida').value = 'Entrada permitida das 08:00h as 20:00h'
         }
@@ -457,8 +459,8 @@ $('#formulario').submit(function(){
 // Função de desativar datas disponíveis
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var Feriado_1_inicio = new Date('2024-05-11T00:00:00.000');
-var Feriado_1_fim = new Date('2024-05-12T23:59:59.999');
+var Feriado_1_inicio = new Date('2024-07-11T00:00:00.000');
+var Feriado_1_fim = new Date('2024-07-17T23:59:59.999');
 var Feriado_2_inicio = new Date('2024-05-01T00:00:00.000');
 var Feriado_2_fim = new Date('2024-05-01T23:59:59.999');
 
