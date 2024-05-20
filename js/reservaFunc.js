@@ -473,11 +473,12 @@ dateEntrada.addEventListener('input', function() {
     if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
-        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
         
     }
     if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
-        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        this.value = '';
     }
     });
 
@@ -489,10 +490,11 @@ dateEntrada.addEventListener('input', function() {
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
       
-        alert('Não funcionaremos neste dia. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
         
     }
     if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
-        alert('Não funcionaremos nos dias 11 e 12 de maio. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        this.value = '';
     }
 });
