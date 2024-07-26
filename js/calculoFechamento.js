@@ -74,7 +74,7 @@ function calcularValor(){
             diaria = 70;
         }
         else{
-            diaria = 80;
+            diaria = 90;
         } 
     }
     else if(calcularQuantDia() >=1){
@@ -83,7 +83,7 @@ function calcularValor(){
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
         else{
-            diaria = 80;
+            diaria = 90;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
