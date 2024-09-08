@@ -12,8 +12,13 @@ function entrada(){
             document.querySelector('#dataIni').value = '';
         }
     }
-    else if (hora > 7 && hora < 20){
+    else{
+        if (hora > 7 && hora < 18){
         horarioInvalido = false;
+        }else{
+            alert('Horário de entrada e saída a partir das 08:00h até as 18:00h')
+            document.querySelector('#dataIni').value = '';
+        }
     }
     
     return horarioInvalido
@@ -37,8 +42,13 @@ function saida(){
     else if(dataFim <= dataInicio){
         horarioInvalido = true
     }
-    else if (hora > 7 && hora < 20){
-        horarioInvalido = false;
+    else {
+        if (hora > 7 && hora < 20){
+            horarioInvalido = false;
+        }else{
+            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            document.querySelector('#dataFim').value = '';
+        }
     }
     
     return horarioInvalido
