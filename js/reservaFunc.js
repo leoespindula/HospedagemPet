@@ -259,8 +259,6 @@ $('#formulario').submit(function(){
     var portePq = document.getElementById('portePq');
     var porteM = document.getElementById('porteM');
     var porte = $('#porte');
-    var nomeTutor = $('#nomeTutor');
-    var telefone = $('#tell');
     var especie = $('#especie');
     var raca = $('#raca');
     var macho = document.getElementById("macho");
@@ -296,7 +294,6 @@ $('#formulario').submit(function(){
     $('.is-invalid').removeClass('is-invalid');
     $('.text-danger').removeClass('text-danger');
     $('.radio').removeClass('form-control')
-
     
     if(nomePet.val() == ''){
         erro.removeClass('d-none');
@@ -337,23 +334,7 @@ $('#formulario').submit(function(){
         return false;
     }
     if(!itenAdicionais){
-        if(nomeTutor.val() == ''){
-            erro.removeClass('d-none');
-            campo.html('Nome do Tutor');
-            nomeTutor.focus();
-            nomeTutor.addClass('is-invalid');
-            return false;
-        } 
-    
-        else if(telefone.val() == ''){
-            erro.removeClass('d-none');
-            campo.html('Telefone');
-            telefone.focus();
-            telefone.addClass('is-invalid');
-            return false;
-        }
-    
-        else if(especie.val() == ''){
+        if(especie.val() == ''){
             erro.removeClass('d-none');
             campo.html('Espécie');
             especie.focus();
@@ -462,9 +443,9 @@ $('#formulario').submit(function(){
     }
     
     else{
+        goToWhatsapp();
         return true;
-    }
-    
+    } 
 });
 
 // Função de desativar datas disponíveis
@@ -509,3 +490,4 @@ dateEntrada.addEventListener('input', function() {
         this.value = '';
     }
 });
+
