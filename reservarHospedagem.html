@@ -17,6 +17,29 @@
     <!-- Info de compartilhamento -->
 
     <style>
+
+        .modal {
+            display: none; /* Oculta o modal por padrão */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+        .modal button {
+            margin-top: 15px;
+        }
         body{
             background-image: url(img/2.png);
         }
@@ -294,6 +317,15 @@
                         </div>
                     </div>
                 </div> 
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <p>O preenchimento do formulário, não garante a vaga do seu pet, a reserva deve ser pré combinada pelo WhatsApp!</p>
+                        <button class="btn btn-danger" onclick="closeModal()">Fechar</button>
+                    </div>
+                </div>
+            
+                <button onclick="showModal()">Mostrar Alerta</button>
+            
             </form> 
             
         </div>
@@ -313,5 +345,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/reservaFunc.js"></script>
     <script src="js/funcaoDeFormulario.js"></script>
+    <script>
+        function showModal() {
+            document.getElementById("myModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        // alert('O preenchimento do formulário, não garante a vaga do seu pet, a reserva deve ser pré combinada pelo WhatsApp')
+    </script>
 </body>
 </html>
