@@ -48,7 +48,7 @@ function goToWhatsapp() {
         var formattedDateIni = new Date(dateIni).toLocaleString('pt-BR');
         var formattedDateFim = new Date(dateFim).toLocaleString('pt-BR');
 
-        var url = "https://wa.me/+5527997988640?text="
+        var url = "https://wa.me/+5527997337516?text="
         + "Nome: " + name + "%0a"
         + "Data entrada: " + formattedDateIni + "%0a"
         + "Data saída: " + formattedDateFim + "%0a"
