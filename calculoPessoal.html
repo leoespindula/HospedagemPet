@@ -112,22 +112,32 @@
                                     <input class="form-control" type="text" id="nomePet" name="Nome_Pet" placeholder=" ">
                                     <label class="form-label" for="nomePet">Nome do Pet:</label>
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-label mx-1" for="porte" >Porte:</label><br>
+                                    <label class="radio btn-group" id="porte">
+                                    <input class="btn-check" type="radio" name="porte" id="portePq" value="pequeno">
+                                    <label class="form-label btn btn-outline-secondary" for="portePq">Pequeno</label>
+                                    <input class="btn-check " type="radio" name="porte" id="porteM" value="medio">
+                                    <label class="form-label btn btn-outline-secondary" for="porteM">Médio</label>
+                                    <input class="btn-check " type="radio" name="porte" id="porteGr" value="grande">
+                                    <label class="form-label btn btn-outline-secondary" for="porteGr">Grande</label>
+                                </div> 
                                 <div class="form-floating my-3">
-                                    <input class="form-control"type="datetime-local" id="dataIni" name="Data_entrada" max="2023-12-31T23:59" placeholder=" " min="2023-01-07T00:00" >
+                                    <input class="form-control"type="datetime-local" id="dataIni" name="Data_entrada" max="2024-12-31T23:59" placeholder=" " min="2023-01-07T00:00" >
                                     <label for="dataIni">Data e hora de entrada:</label>
                                 </div>    
                                 <div class="form-floating my-3">
-                                    <input class="form-control" type="datetime-local" id="dataFim" name="Data_saida" max="2023-12-31T23:59"  min="2023-01-07T00:00" placeholder=" " >
+                                    <input class="form-control" type="datetime-local" id="dataFim" name="Data_saida" max="2024-12-31T23:59"  min="2023-01-07T00:00" placeholder=" " >
                                     <label class="form-label" for="dataFim">Data e hora de saída:</label>
                                 </div> 
                                 <div class="form-floating my-3">
                                     <input class="form-control" type="number" id="fralda" name="qntFralda" placeholder=" " >
                                     <label class="form-label" for="fralda">Quantidade Fralda/Tapete:</label>
                                 </div> 
-                                <div class="form-floating my-3">
+                                <!-- <div class="form-floating my-3">
                                     <input class="form-control" type="number" id="banho" name="qntBanho" placeholder=" " >
                                     <label class="form-label" for="banho">Quantidade Banho:</label>
-                                </div>
+                                </div> -->
                                 <div class="form-floating my-3">
                                     <input class="form-control valor d-none" disabled type="text" name="ValorDiaria" id="resultado" placeholder=" ">
                                     <label class="form-label d-none" for="resultado" id="result" >Diárias e valor:</label>
@@ -138,10 +148,10 @@
                                     <input class="form-control valor d-none" disabled type="text" name="ValorFralda" id="resultadoFralda" placeholder=" ">
                                     <label class="form-label d-none" for="resultadoFralda" id="resultF" >Fraldas/Tapete higiênico:</label>
                                 </div>
-                                <div class="form-floating my-3">
+                                <!-- <div class="form-floating my-3">
                                     <input class="form-control valor d-none" disabled type="text" name="Banho" id="resultadoBanho" placeholder=" ">
                                     <label class="form-label d-none" for="resultadoBanho" id="resultB" >Banho:</label>
-                                </div>
+                                </div> -->
                                 <div class="form-floating my-3">
                                     <input class="form-control valor d-none" disabled type="text" name="ValorTotal" id="total" placeholder=" ">
                                     <label class="form-label d-none" for="total" id="resultTotal" >Total:</label>
@@ -163,19 +173,19 @@
         </div>
     </div>
     <div class="whats">
-        <a href="https://wa.me/5527999832612?text=Olá, Tenho interesse no serviço de hospedagem para o meu pet." target="_blank">
-            <img src="img/whatsapp.png" alt="whatsapp" width="50" title="Acesse meu Whatsapp">
+        <a href="https://wa.me/5527997337516?text=Olá, Tenho interesse no serviço de hospedagem para o meu pet." target="_blank">
+            <img src="img/whatsapp.png" alt="whatsapp" width="50" title="Acesse o Whatsapp Da Hospedagem Pet Domingos Martins">
         </a>
     </div>
     <div class="insta">    
-        <a href="https://instagram.com/mariaclara_mcom" target="_blank">
-            <img src="img/instagram.png" alt="instagram" width="50" onclick="instagram.com/mariaclara_mcom" title="Acesse meu Instagram">
+        <a href="https://instagram.com/hospedagempetdomingosmartins" target="_blank">
+            <img src="img/instagram.png" alt="instagram" width="50" onclick="instagram.com/hospedagempetdomingosmartins" title="Acesse o Instagram Da Hospedagem Pet Domingos Martins">
         </a>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="js/HospedagemFunc.js"></script>
+    <!-- <script src="js/HospedagemFunc.js"></script> -->
     <script src="js/calculoFechamento.js"></script>
 </body>
 </html>

@@ -82,15 +82,17 @@
             transform: scale(1.1);
             transition: 0.5s;
         }
-        .botao{
-            margin-left: auto;
-            margin-right: auto;
-            width: max(360px, 65vw);
+        h4.preco{
+            margin-top: 20px;
+            bottom: 10px;
+            left: 20px;
+            position: absolute;
+            transition: 0.3s;
         }
-        ul{
-            padding: 0%;
+        h4.preco:hover{
+            transform: scale(1.15);
+            transition: 0.3s;
         }
-        
     </style>
 </head>
 <body>
@@ -103,7 +105,8 @@
                 <div class="navbar-nav mx-auto text-center">
                   <a class="nav-link"  href="index.html">&nbsp;Início&nbsp;</a>
                   <a class="nav-link" href="reservaHospedagem.html">&nbsp;Hospedagem&nbsp;</a>
-                  <a class="nav-link active" href="pagamento.html">&nbsp;Pagamento&nbsp;</a>
+                  <a class="nav-link" href="pagamento.html">&nbsp;Pagamento&nbsp;</a>
+                  <a class="nav-link active" href="planos.html">&nbsp;Planos&nbsp;</a>
                 </div>
               </div>
             </div>
@@ -111,7 +114,7 @@
           <center>
             <img class="logo"src="img/logo.jpeg" alt="logo">
         </center>        
-        <H1>LINKS DE PAGAMENTO</H1>
+        <H1>PLANOS MENSAIS CRECHE</H1>
     </div>     
     
     <div class="conteudo">
@@ -120,14 +123,12 @@
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
                             <div class="card-body sobreImg">
-                                <h2>Pix</h2>
+                                <h2>3 dias na semana meio período</h2>
                                 <center>
                                     <ul>
-                                        <p>Número de telefone: 27 999832612</p>
-                                        <a href="https://nubank.com.br/pagar/1cxyla/DsvwfrB96I" target="_blank">
-                                            <img src="img/pix.jpeg" alt="instagram" width="250" title="Pagamento via pix">
-                                            <p>Escaneie o QR code ou clique aqui!</p>
-                                        </a>
+                                        <h3 >Das 08:00 as 13:00 ou </h3>
+                                        <h3 class="mb-5">Das 13:00 as 18:00</h3>
+                                        <h4 class="preco">R$300,00</h1>
                                     </ul>
                                 </center>
                             </div>
@@ -136,39 +137,52 @@
                     <div class="col-12 col-lg-6 my-3">
                         <div class="card">
                             <div class="card-body sobreImg">
-                                <h2>PicPay</h2>
+                                <h2>3 dias na semana integral</h2>
                                 <center>
-                                <ul>
-                                    <p>@maria.clara.oliveira.martins</p>
-                                    <a href="https://picpay.me/maria.clara.oliveira.martins" target="_blank">
-                                        <img src="img/picpay.jpeg" alt="instagram" width="250" title="Pagamento via picpay">
-                                        <p>Escaneie o QR code ou clique aqui!</p>
-                                    </a>
-                                </ul>
+                                <div>
+                                    <h3 class="mb-5">Das 08:00 as 18:00</h3>
+                                    <h4 class="preco">R$520,00</h1>
+                                    
+                                </div>
                                 </center>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="popup" class="popup">
-                    <div class="popup-content">
-                        <h2>AVISO!</h2>
-                        <p id="valorAPagar">Em razão  da alta procura a reserva só será efetivada mediante a entrada de 50% do orçamento inicial.</p>
-                        <p>Caso haja desistência o valor pago não será reembolsado, gratos pela compreensão!</p>
-                        <p id="valorParagrafo" hidden>Entrada R$ </p>
-                        <button class="popupMsg btn mb-2" onclick="closePopup()">Estou ciente</button>
+                </div> 
+                <div class="row">
+                    <div class="col-12 col-lg-6 my-3">
+                        <div class="card">
+                            <div class="card-body sobreImg">
+                                <h2>5 dias na semana meio período</h2>
+                                <center>
+                                    <div>
+                                        <h3>Das 08:00 as 13:00 ou </h3>
+                                        <h3 class="mb-5">Das 13:00 as 18:00</h3>
+                                        <h4 class="preco">R$450,00</h1>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
                     </div>
-                </div>  
+                    <div class="col-12 col-lg-6 my-3">
+                        <div class="card">
+                            <div class="card-body sobreImg">
+                                <h2>5 dias na semana integral</h2>
+                                <center>
+                                <div>
+                                    <h3 class="mb-5">Das 08:00 as 18:00</h3>
+                                    <h4 class="preco">R$780,00</h1>
+                                </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
                 
             </div>
             
         </div>    
-        
-        <center>
-            <p class="botao">
-                <a class="btn btn-primary btn-lg" href="index.html">VOLTAR</a>
-            </p>
-        </center>
+
     
             
     <div class="whats">
@@ -178,33 +192,8 @@
     </div>
     <div class="insta">    
         <a href="https://instagram.com/hospedagempetdomingosmartins" target="_blank">
-            <img src="img/instagram.png" alt="instagram" width="50" onclick="instagram.com/hospedagempetdomingosmartins" title="Acesse o Instagram Da Hospedagem Pet Domingos Martins">
+            <img src="img/instagram.png" alt="instagram" width="50" onclick="instagram.com/mariaclara_mcom" title="Acesse o Instagram Da Hospedagem Pet Domingos Martins">
         </a>
     </div>
 </body>
 </html>
-<script>
-    function openPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
-
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-}
-
-var url = window.location.href;
-var params = new URLSearchParams(new URL(url).search);
-var valor = params.get("valor")/2;
-valor = parseFloat(valor).toFixed(2).replace('.',',');
-
-
-if(valor!= 0 && valor != null && valor!= '0,00'){
-    openPopup();
-    document.getElementById('valorParagrafo').hidden=false;
-    document.getElementById('valorParagrafo').textContent += valor + ".";
-    // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
-
-}
-</script>

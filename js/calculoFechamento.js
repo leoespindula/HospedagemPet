@@ -1,16 +1,16 @@
 const dataFim = document.querySelector('#dataFim')
 const dataIni = document.querySelector('#dataIni')
 const adicionais = document.querySelector('#fralda')
-const banhos = document.querySelector('#banho')
 
 function entrada(){
     const dataInicio = new Date(document.querySelector('#dataIni').value); 
-    let horarioInvalido = true;
+    let horarioValido = true;
     var hora = dataInicio.getHours()
-    if (hora > 7 && hora < 20){
-        horarioInvalido = false;
-    }
-    return horarioInvalido
+    // if (hora > 7 && hora < 20){
+    //     horarioValido = false;
+    // }
+    horarioValido = false;
+    return horarioValido
 }
 
 function calcularQuantDia(){
@@ -47,6 +47,8 @@ function calcularValor(){
     var hora = dataInicio.getHours()
     let diaria = 0;
     let vlrhr = 3
+    var portePq = document.getElementById('portePq');
+    var porteM = document.getElementById('porteM');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
@@ -54,28 +56,56 @@ function calcularValor(){
     let vlrhrs = 0
     
     if(calcHorasExtras() > 12){
-        if (calcularQuantDia() > 3){
-            vlrhrs = 60;
-        }else{
+        if(portePq.checked == true){
             vlrhrs = 70
-        }       
+        }
+        else if(porteM.checked == true){
+            vlrhrs = 80
+        } 
+        else{
+            vlrhrs = 90
+        }
+              
     }
     else{
         vlrhrs = vlrhr * calcHorasExtras()
     }
 
     if (calcularQuantDia() == 0 && calcHorasExtras() <= 10){
-        diaria = 50
+        if(portePq.checked == true){
+            diaria = 50;
+        }
+        else if(porteM.checked == true){
+            diaria = 70;
+        } 
+        else{
+            diaria = 80
+        }
     }
     else if (calcularQuantDia() == 0 && calcHorasExtras() > 10){
-        diaria = 70
+        if(portePq.checked == true){
+            diaria = 70;
+        }
+        else if(porteM.checked == true){
+            diaria = 80;
+        } 
+        else{
+            diaria = 90
+        }
     }
-    else if (calcularQuantDia() > 3){
-        diaria = 60;
-        diaria = diaria * calcularQuantDia() + vlrhrs
-    }else if(calcularQuantDia() >=1 && calcularQuantDia()<=3){
-        diaria = 70;
-        diaria = diaria * calcularQuantDia() + vlrhrs
+    else if(calcularQuantDia() >=1){
+        if(portePq.checked == true){
+            diaria = 70;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else if(porteM.checked == true){
+            diaria = 80;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
+        else{
+            diaria = 90;
+            diaria = diaria * calcularQuantDia() + vlrhrs
+        }
     }
     return diaria
 }
@@ -106,12 +136,11 @@ function atualizarCampos() {
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
         document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda()) +',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('resultadoBanho').classList.remove('d-none');
-        document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
@@ -120,12 +149,11 @@ function atualizarCampos() {
         document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
         document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() )+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
         document.getElementById('resultF').classList.remove('d-none');
-        document.getElementById('resultadoBanho').classList.remove('d-none');
-        document.getElementById('resultB').classList.remove('d-none');
         document.getElementById('total').classList.remove('d-none');
         document.getElementById('resultTotal').classList.remove('d-none');
     }
@@ -143,17 +171,12 @@ adicionais.addEventListener('change', () => {
     atualizarCampos();
 });
 
-banhos.addEventListener('change', () => {
-    atualizarCampos();
-});
-
 function goToWhatsapp() {
     var name = document.getElementById("nomePet").value;
     var dateIni = document.getElementById("dataIni").value;
     var dateFim = document.getElementById("dataFim").value;
     var valorD = document.getElementById("resultado").value;
     var valorF = document.getElementById("resultadoFralda").value;
-    var valorB = document.getElementById("resultadoBanho").value;
     var valorT = document.getElementById("total").value;
 
     var url = "https://wa.me/?text="
@@ -162,7 +185,6 @@ function goToWhatsapp() {
     + "Data saída: " + dateFim + "%0a"
     + "Diárias e valor: " + valorD + "%0a"
     + "Fralda/Tapete higiênico: " + valorF + "%0a"
-    + "Banho: " + valorB + "%0a"
     + valorT + "%0a";
 
     window.open(url, '_blank').focus();
@@ -175,13 +197,4 @@ function calcQuantFralda(){
     let totalFraldas = (qntFralda * valor)
     
     return totalFraldas
-}
-
-function calcQuantBanho(){
-    const qntBanho = document.getElementById('banho').value;
-    const valor = 50
-
-    let totalBanho = (qntBanho * valor)
-    
-    return totalBanho
 }
