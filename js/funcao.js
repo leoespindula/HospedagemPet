@@ -1,6 +1,4 @@
 $('#formulario2').submit(function(){
-    var nomeTutor = $('#nomeTutor');
-    var telefone = $('#tell');
     var especie = $('#especie');
     var raca = $('#raca');
     var macho = document.getElementById("macho");
@@ -34,23 +32,7 @@ $('#formulario2').submit(function(){
 
 
 
-    if(nomeTutor.val() == ''){
-        erro.removeClass('d-none');
-        campo.html('Nome do Tutor');
-        nomeTutor.focus();
-        nomeTutor.addClass('is-invalid');
-        return false;
-    } 
-
-    else if(telefone.val() == ''){
-        erro.removeClass('d-none');
-        campo.html('Telefone');
-        telefone.focus();
-        telefone.addClass('is-invalid');
-        return false;
-    }
-
-    else if(especie.val() == ''){
+if(especie.val() == ''){
         erro.removeClass('d-none');
         campo.html('Espécie');
         especie.focus();
@@ -158,6 +140,7 @@ $('#formulario2').submit(function(){
     }
     
     else{
+        goToWhatsapp();
         return true;
     }
     

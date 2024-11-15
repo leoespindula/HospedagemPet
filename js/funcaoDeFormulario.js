@@ -79,7 +79,7 @@ function goToWhatsapp() {
         var rotina = document.getElementById("rotina").value;
         var valorT = document.getElementById("valorFinal").value;
 
-        var url = "https://wa.me/+5527997988640?text="
+        var url = "https://wa.me/+5527997337516?text="
         + "Nome: " + name + "%0a"
         + "Data entrada: " + dateIni + "%0a"
         + "Data saída: " + dateFim + "%0a"

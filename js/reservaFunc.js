@@ -142,7 +142,7 @@ function calcularValor(){
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
-    // document.getElementById('valorFinal').value = 'R$' + diaria +',00';
+    document.getElementById('valorFinal').value = 'R$' + diaria +',00';
     // document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
     // alert(document.getElementById('urlVar').value)
     return diaria
@@ -257,6 +257,7 @@ $('#formulario').submit(function(){
     var itens = $('#item');
     var portePq = document.getElementById('portePq');
     var porteM = document.getElementById('porteM');
+    var porteGr = document.getElementById('porteGr');
     var porte = $('#porte');
     var especie = $('#especie');
     var raca = $('#raca');
@@ -309,7 +310,7 @@ $('#formulario').submit(function(){
         return false;
     }
 
-    else if(portePq.checked == false && porteM.checked == false){
+    else if(portePq.checked == false && porteM.checked == false && porteGr.checked == false){
         erro.removeClass('d-none');
         campo.html('Porte');
         porte.focus();
@@ -439,6 +440,10 @@ $('#formulario').submit(function(){
             sociavel.addClass('is-invalid form-control');
             return false;
         }
+        else{
+            goToWhatsapp();
+            return true;
+        } 
     }
     
     else{

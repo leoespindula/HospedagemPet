@@ -191,7 +191,7 @@
                                     <label class="form-label d-none" for="dataInvalida" id="valid">Selecione um horario válido</label>
                                 </div>
                                 <div>
-                                    <!-- <span id="valorFinal"></span> -->
+                                    <input type="hidden" id="valorFinal" name="Valor">
                                 </div>
 
                                 <!-- Início área adicionais -->
@@ -232,9 +232,9 @@
                                     <div class="form-group">
                                         <label class="form-label" for="medicamentos">Faz uso de medicamentos:</label><br>
                                         <label class="radio btn-group" id="medicamentoSN">
-                                        <input class="btn-check" type="radio" name="medicamentos"id="fazUso" value="sim" >
+                                        <input class="btn-check" type="radio" name="medicamentos"id="fazUso" value="Sim" >
                                         <label class="form-label btn btn-outline-primary" for="fazUso">Sim</label>
-                                        <input class="btn-check" type="radio" name="medicamentos" id="naoUsa" value="nao">
+                                        <input class="btn-check" type="radio" name="medicamentos" id="naoUsa" value="Nao">
                                         <label class="form-label btn btn-outline-danger" for="naoUsa">Não</label>
                                     </div>
                                     <div class="form-label form-floating my-2">
@@ -244,9 +244,9 @@
                                     <div class="form-group">
                                         <label class="form-label" for="castrado">Castrado:</label><br>
                                         <label class="radio btn-group" id="castrado">
-                                        <input class="btn-check" type="radio" name="castrado"id="sCastrado" value="sim" >
+                                        <input class="btn-check" type="radio" name="castrado"id="sCastrado" value="Sim" >
                                         <label class="form-label btn btn-outline-primary" for="sCastrado">Sim</label>
-                                        <input class="btn-check"  type="radio" name="castrado" id="nCastrado" value="nao">
+                                        <input class="btn-check"  type="radio" name="castrado" id="nCastrado" value="Nao">
                                         <label class="form-label btn btn-outline-danger" for="nCastrado">Não</label></label>
                                     </div>
                                     <div class="form-group">
@@ -291,7 +291,7 @@
 
                                 <div class="form-group mt-2 mb-2">
                                     <center>
-                                    <button type="submit" id="submit" class="btn btn-primary mx-1" >ENVIAR</button>
+                                    <button type="submit" id="submit" class="btn btn-primary mx-1">ENVIAR</button>
                                     <button type="reset" class="btn btn-secondary mx-1">LIMPAR</button>
                                     </center>
                                 </div> 
