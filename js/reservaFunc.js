@@ -30,8 +30,6 @@ function saida(){
     var hora = dataFim.getHours()
     
     if(dataFim.toString().includes('Sun') || dataFim.toString().includes('Sat')){
-            
-        
         if(hora > 8 && hora < 18){
             horarioInvalido = false;
         }else{
@@ -144,8 +142,9 @@ function calcularValor(){
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
     }
-    document.getElementById('valorFinal').value = 'R$' + diaria +',00';
-    document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
+    // document.getElementById('valorFinal').value = 'R$' + diaria +',00';
+    // document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
+    // alert(document.getElementById('urlVar').value)
     return diaria
 }
 

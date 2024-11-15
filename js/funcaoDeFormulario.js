@@ -76,6 +76,7 @@ function goToWhatsapp() {
         var vermifugado = document.querySelector('input[name="vermifugado"]:checked') ? document.querySelector('input[name="vermifugado"]:checked').value : '';
         var prevencao = document.querySelector('input[name="Prevencao_anti_Pulgas"]:checked') ? document.querySelector('input[name="Prevencao_anti_Pulgas"]:checked').value : '';
         var sociavel = document.querySelector('input[name="sociavel"]:checked') ? document.querySelector('input[name="sociavel"]:checked').value : '';
+        var rotina = document.getElementById("rotina").value;
         var valorT = document.getElementById("valorFinal").value;
 
         var url = "https://wa.me/+5527997988640?text="
@@ -94,7 +95,9 @@ function goToWhatsapp() {
         + "Vermifugado: " + vermifugado + "%0a"
         + "Prevenção contra pulgas e carrapatos: " + prevencao + "%0a"
         + "Sociável: " + sociavel + "%0a"
-        + "Sexo: " + sexo + "%0a"                
+        + "Sexo: " + sexo + "%0a"      
+        + "Rotina: " + rotina + "%0a" 
+        + "%0a"                 
         + valorT + "%0a";
         window.open(url, '_blank').focus();
     }
