@@ -5,18 +5,18 @@ function entrada(){
     
     if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
             
-        if(hora > 8 && hora < 18){
+        if(hora >= 9 && hora < 12 || hora >= 15 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 09:00h até as 12:00h e das 15:00h as 18:00h aos Sábados e Domingos')
             document.querySelector('#dataIni').value = '';
         }
     }
     else{
-        if (hora > 7 && hora < 18){
+        if (hora >= 8 && hora < 12 || hora >= 14 && hora < 18){
         horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 08:00h até as 18:00h')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataIni').value = '';
         }
     }
@@ -30,10 +30,10 @@ function saida(){
     var hora = dataFim.getHours()
     
     if(dataFim.toString().includes('Sun') || dataFim.toString().includes('Sat')){
-        if(hora > 8 && hora < 18){
+        if(hora >= 9 && hora < 12 || hora >= 15 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataFim').value = '';
         }
     }
@@ -41,10 +41,10 @@ function saida(){
         horarioInvalido = true
     }
     else {
-        if (hora > 7 && hora < 20){
+        if (hora >= 8 && hora < 12 || hora >= 14 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataFim').value = '';
         }
     }
