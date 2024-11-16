@@ -123,10 +123,12 @@
                                 <h2>Pix</h2>
                                 <center>
                                     <ul>
-                                        <p>Número de telefone: 27 999832612</p>
-                                        <a href="https://nubank.com.br/pagar/1cxyla/DsvwfrB96I" target="_blank">
-                                            <img src="img/pix.jpeg" alt="instagram" width="250" title="Pagamento via pix">
-                                            <p>Escaneie o QR code ou clique aqui!</p>
+                                        <p>CNPJ: 52.085.960/0001-03</p>
+                                        <a id="copyButton" style="cursor: pointer; text-decoration: none;">
+                                            <img src="img/pix.jpeg" alt="Pix" width="250" title="Pagamento via pix">
+                                            <p hidden id="textToCopy">52.085.960/0001-03</p>
+                                            <p>Escaneie o QR code ou clique aqui para copiar a chave!</p>
+                                            <div id="copyMessage" style="display: none; color: green; margin-top: 10px;">Chave pix copiada!</div>
                                         </a>
                                     </ul>
                                 </center>
@@ -184,27 +186,48 @@
 </body>
 </html>
 <script>
-    function openPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
+//     function openPopup() {
+//     var popup = document.getElementById("popup");
+//     popup.style.display = "block";
+// }
 
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-}
+// function closePopup() {
+//     var popup = document.getElementById("popup");
+//     popup.style.display = "none";
+// }
 
-var url = window.location.href;
-var params = new URLSearchParams(new URL(url).search);
-var valor = params.get("valor")/2;
-valor = parseFloat(valor).toFixed(2).replace('.',',');
+// var url = window.location.href;
+// var params = new URLSearchParams(new URL(url).search);
+// var valor = params.get("valor")/2;
+// valor = parseFloat(valor).toFixed(2).replace('.',',');
 
 
-if(valor!= 0 && valor != null && valor!= '0,00'){
-    openPopup();
-    document.getElementById('valorParagrafo').hidden=false;
-    document.getElementById('valorParagrafo').textContent += valor + ".";
-    // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
+// if(valor!= 0 && valor != null && valor!= '0,00'){
+//     openPopup();
+//     document.getElementById('valorParagrafo').hidden=false;
+//     document.getElementById('valorParagrafo').textContent += valor + ".";
+//     // document.getElementById('valorAPagar').textContent = "A reserva só será efetivada mediante o pagamento de R$"+valor/2 + ",00, referente a 50% do orçamento inicial.";
 
-}
+// }
+
+document.getElementById("copyButton").addEventListener("click", function () {
+    // Obtém o texto do parágrafo onde está o CNPJ
+    const textToCopy = document.getElementById("textToCopy").textContent;
+
+    // Copia o texto para a área de transferência
+    navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+            // Mostra a mensagem de sucesso
+            const copyMessage = document.getElementById("copyMessage");
+            copyMessage.style.display = "block";
+
+            // Esconde a mensagem após 3 segundos
+            setTimeout(() => {
+                copyMessage.style.display = "none";
+            }, 5000);
+        })
+        .catch(err => {
+            console.error("Erro ao copiar CNPJ: ", err);
+        });
+});
 </script>
