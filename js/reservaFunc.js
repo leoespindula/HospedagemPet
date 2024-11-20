@@ -5,18 +5,18 @@ function entrada(){
     
     if(dataInicio.toString().includes('Sun') || dataInicio.toString().includes('Sat')){
             
-        if(hora > 8 && hora < 18){
+        if(hora >= 9 && hora < 12 || hora >= 15 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 09:00h até as 12:00h e das 15:00h as 18:00h aos Sábados e Domingos')
             document.querySelector('#dataIni').value = '';
         }
     }
     else{
-        if (hora > 7 && hora < 18){
+        if (hora >= 8 && hora < 12 || hora >= 14 && hora < 18){
         horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 08:00h até as 18:00h')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataIni').value = '';
         }
     }
@@ -30,12 +30,10 @@ function saida(){
     var hora = dataFim.getHours()
     
     if(dataFim.toString().includes('Sun') || dataFim.toString().includes('Sat')){
-            
-        
-        if(hora > 8 && hora < 18){
+        if(hora >= 9 && hora < 12 || hora >= 15 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataFim').value = '';
         }
     }
@@ -43,10 +41,10 @@ function saida(){
         horarioInvalido = true
     }
     else {
-        if (hora > 7 && hora < 20){
+        if (hora >= 8 && hora < 12 || hora >= 14 && hora < 18){
             horarioInvalido = false;
         }else{
-            alert('Horário de entrada e saída a partir das 09:00h até as 18:00h aos Sábados e Domingos')
+            alert('Horário de entrada e saída das 08:00h até as 12:00h e das 14:00h as 18:00h')
             document.querySelector('#dataFim').value = '';
         }
     }
@@ -145,7 +143,8 @@ function calcularValor(){
         }
     }
     document.getElementById('valorFinal').value = 'R$' + diaria +',00';
-    document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
+    // document.getElementById('urlVar').value = 'https://leoespindula.github.io/HospedagemPet/pagamento.html?valor=' + diaria;
+    // alert(document.getElementById('urlVar').value)
     return diaria
 }
 
@@ -258,9 +257,8 @@ $('#formulario').submit(function(){
     var itens = $('#item');
     var portePq = document.getElementById('portePq');
     var porteM = document.getElementById('porteM');
+    var porteGr = document.getElementById('porteGr');
     var porte = $('#porte');
-    var nomeTutor = $('#nomeTutor');
-    var telefone = $('#tell');
     var especie = $('#especie');
     var raca = $('#raca');
     var macho = document.getElementById("macho");
@@ -296,7 +294,6 @@ $('#formulario').submit(function(){
     $('.is-invalid').removeClass('is-invalid');
     $('.text-danger').removeClass('text-danger');
     $('.radio').removeClass('form-control')
-
     
     if(nomePet.val() == ''){
         erro.removeClass('d-none');
@@ -313,7 +310,7 @@ $('#formulario').submit(function(){
         return false;
     }
 
-    else if(portePq.checked == false && porteM.checked == false){
+    else if(portePq.checked == false && porteM.checked == false && porteGr.checked == false){
         erro.removeClass('d-none');
         campo.html('Porte');
         porte.focus();
@@ -337,23 +334,7 @@ $('#formulario').submit(function(){
         return false;
     }
     if(!itenAdicionais){
-        if(nomeTutor.val() == ''){
-            erro.removeClass('d-none');
-            campo.html('Nome do Tutor');
-            nomeTutor.focus();
-            nomeTutor.addClass('is-invalid');
-            return false;
-        } 
-    
-        else if(telefone.val() == ''){
-            erro.removeClass('d-none');
-            campo.html('Telefone');
-            telefone.focus();
-            telefone.addClass('is-invalid');
-            return false;
-        }
-    
-        else if(especie.val() == ''){
+        if(especie.val() == ''){
             erro.removeClass('d-none');
             campo.html('Espécie');
             especie.focus();
@@ -459,12 +440,16 @@ $('#formulario').submit(function(){
             sociavel.addClass('is-invalid form-control');
             return false;
         }
+        else{
+            goToWhatsapp();
+            return true;
+        } 
     }
     
     else{
+        goToWhatsapp();
         return true;
-    }
-    
+    } 
 });
 
 // Função de desativar datas disponíveis
@@ -509,3 +494,4 @@ dateEntrada.addEventListener('input', function() {
         this.value = '';
     }
 });
+
