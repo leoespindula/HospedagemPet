@@ -133,10 +133,8 @@ function atualizarCampos() {
     }
     else if(calcularQuantDia() < 1){
         document.getElementById('resultado').value = 'Valor fixo, R$'+calcularValor ()+',00';
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
-        document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda()) +',00';
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/4)+ ',  R$'+calcQuantFralda()+',00';
+        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() )+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
         document.getElementById('resultadoFralda').classList.remove('d-none');
@@ -146,9 +144,7 @@ function atualizarCampos() {
     }
     else{
         document.getElementById('resultado').value = calcularQuantDia() +' diária(s) e '+calcHorasExtras()+' hora(s), R$'+calcularValor ()+',00'
-        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/3)+ ',  R$'+calcQuantFralda()+',00';
-        document.getElementById('resultadoBanho').value = 'Quantidade '+(calcQuantBanho()/50)+ ',  R$'+calcQuantBanho()+',00';
-        document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() + calcQuantBanho())+',00';
+        document.getElementById('resultadoFralda').value = 'Quantidade '+(calcQuantFralda()/4)+ ',  R$'+calcQuantFralda()+',00';
         document.getElementById('total').value = 'Valor Total: R$'+(calcularValor () + calcQuantFralda() )+',00';
         document.getElementById('resultado').classList.remove('d-none');
         document.getElementById('result').classList.remove('d-none');
@@ -192,7 +188,7 @@ function goToWhatsapp() {
 
 function calcQuantFralda(){
     const qntFralda = document.getElementById('fralda').value;
-    const valor = 3
+    const valor = 4
 
     let totalFraldas = (qntFralda * valor)
     
