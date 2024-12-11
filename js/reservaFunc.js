@@ -455,10 +455,10 @@ $('#formulario').submit(function(){
 // Função de desativar datas disponíveis
 var dateEntrada = document.getElementById('dataIni');
 var dateSaida = document.getElementById('dataFim');
-var Feriado_1_inicio = new Date('2024-07-11T00:00:00.000');
-var Feriado_1_fim = new Date('2024-07-17T23:59:59.999');
-var Feriado_2_inicio = new Date('2024-05-01T00:00:00.000');
-var Feriado_2_fim = new Date('2024-05-01T23:59:59.999');
+var Feriado_1_inicio = new Date('2024-12-24T00:00:00.000');
+var Feriado_1_fim = new Date('2024-12-26T23:59:59.999');
+var Feriado_2_inicio = new Date('2024-12-24T00:00:00.000');
+var Feriado_2_fim = new Date('2024-12-26T23:59:59.999');
 
 dateEntrada.addEventListener('input', function() {
     var selectedDate = new Date(this.value);
@@ -469,11 +469,11 @@ dateEntrada.addEventListener('input', function() {
     if ((selectedDate >= Feriado_1_inicio && selectedDate <= Feriado_1_fim) ||
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
-        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 24/12 a 26/12. Gratos pela compreensão!');
         
     }
     if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
-        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 24/12 a 26/12. Gratos pela compreensão!');
         this.value = '';
     }
     });
@@ -486,11 +486,11 @@ dateEntrada.addEventListener('input', function() {
         (selectedDate >= Feriado_2_inicio && selectedDate <= Feriado_2_fim)) {
         this.value = '';
       
-        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 24/12 a 26/12. Gratos pela compreensão!');
         
     }
     if((dataIniValue <= Feriado_1_inicio && dataFimValue >= Feriado_1_fim) || (dataIniValue <= Feriado_2_inicio && dataFimValue >= Feriado_2_fim)){
-        alert('Não funcionaremos no período de 11/07 a 16/07. Gratos pela compreensão!');
+        alert('Não funcionaremos no período de 24/12 a 26/12. Gratos pela compreensão!');
         this.value = '';
     }
 });
