@@ -90,7 +90,7 @@ function calcularValor(){
     let diaria = 0;
     let vlrhr = 3
     var portePq = document.getElementById('portePq');
-    var porteM = document.getElementById('porteM');
+    // var porteM = document.getElementById('porteM');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
@@ -108,9 +108,9 @@ function calcularValor(){
         if(portePq.checked == true){
             diaria = 50;
         }
-        else if(porteM.checked == true){
-            diaria = 70;
-        } 
+        // else if(porteM.checked == true){
+        //     diaria = 70;
+        // } 
         else{
             diaria = 80;
         }
@@ -120,9 +120,9 @@ function calcularValor(){
             diaria = 70;
         }
         
-        if(porteM.checked == true){
-            diaria = 80;
-        }
+        // if(porteM.checked == true){
+        //     diaria = 80;
+        // }
         else{
             diaria = 90;
         } 
@@ -133,10 +133,10 @@ function calcularValor(){
             diaria = 70;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
-        if(porteM.checked == true){
-            diaria = 80;
-            diaria = diaria * calcularQuantDia() + vlrhrs
-        }
+        // if(porteM.checked == true){
+        //     diaria = 80;
+        //     diaria = diaria * calcularQuantDia() + vlrhrs
+        // }
         else{
             diaria = 90;
             diaria = diaria * calcularQuantDia() + vlrhrs
@@ -256,7 +256,7 @@ $('#formulario').submit(function(){
     var campo = $('#campo-erro');
     var itens = $('#item');
     var portePq = document.getElementById('portePq');
-    var porteM = document.getElementById('porteM');
+    // var porteM = document.getElementById('porteM');
     var porteGr = document.getElementById('porteGr');
     var porte = $('#porte');
     var especie = $('#especie');
@@ -310,7 +310,7 @@ $('#formulario').submit(function(){
         return false;
     }
 
-    else if(portePq.checked == false && porteM.checked == false && porteGr.checked == false){
+    else if(portePq.checked == false && porteGr.checked == false){
         erro.removeClass('d-none');
         campo.html('Porte');
         porte.focus();

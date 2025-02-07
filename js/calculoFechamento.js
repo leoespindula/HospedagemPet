@@ -48,7 +48,7 @@ function calcularValor(){
     let diaria = 0;
     let vlrhr = 3
     var portePq = document.getElementById('portePq');
-    var porteM = document.getElementById('porteM');
+    // var porteM = document.getElementById('porteM');
     if (hora > 5 && hora < 18){
         vlrhr = 5
     }
@@ -59,9 +59,9 @@ function calcularValor(){
         if(portePq.checked == true){
             vlrhrs = 70
         }
-        else if(porteM.checked == true){
-            vlrhrs = 80
-        } 
+        // else if(porteM.checked == true){
+        //     vlrhrs = 80
+        // } 
         else{
             vlrhrs = 90
         }
@@ -75,9 +75,9 @@ function calcularValor(){
         if(portePq.checked == true){
             diaria = 50;
         }
-        else if(porteM.checked == true){
-            diaria = 70;
-        } 
+        // else if(porteM.checked == true){
+        //     diaria = 70;
+        // } 
         else{
             diaria = 80
         }
@@ -86,9 +86,9 @@ function calcularValor(){
         if(portePq.checked == true){
             diaria = 70;
         }
-        else if(porteM.checked == true){
-            diaria = 80;
-        } 
+        // else if(porteM.checked == true){
+        //     diaria = 80;
+        // } 
         else{
             diaria = 90
         }
@@ -98,10 +98,10 @@ function calcularValor(){
             diaria = 70;
             diaria = diaria * calcularQuantDia() + vlrhrs
         }
-        else if(porteM.checked == true){
-            diaria = 80;
-            diaria = diaria * calcularQuantDia() + vlrhrs
-        }
+        // else if(porteM.checked == true){
+        //     diaria = 80;
+        //     diaria = diaria * calcularQuantDia() + vlrhrs
+        // }
         else{
             diaria = 90;
             diaria = diaria * calcularQuantDia() + vlrhrs
